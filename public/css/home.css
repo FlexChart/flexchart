@@ -16,6 +16,12 @@ body, html {
     min-width:500px;
 }
 
+#quote-sentence-container h1 {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 68px;    
+}
+
 button{
     appearance: none;
     -moz-appearance: none;
@@ -96,6 +102,14 @@ a:hover::after{
 }
 
 
+/* home page */
+
+#quote-sentence-container {
+    position:absolute;
+    top: 100px;
+    float:left;
+    left: 20%;
+}
 
 
 
