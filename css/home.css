@@ -8,3 +8,37 @@
     list-style: none;
 }
 
+h4 {
+    font-size: 25px;
+}
+
+body, html {
+    background-color:var(--main-bg-color);
+}
+
+/* navbar */
+
+.main-navbar {
+    position:absolute;
+    top: 0;
+    left: 10%;
+    width: 100%;
+    height: 60px;
+}
+
+
+#main-title {
+    line-height: 34px;
+}
+
+
+#main-title-container {
+    position: relative;
+    top: 30px;
+    left:125px;
+}
+
+
+
+
+
