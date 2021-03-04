@@ -13,6 +13,7 @@
 body, html {
     background-color:var(--main-bg-color);
     color: var(--dark);
+    min-width:500px;
 }
 
 button{
@@ -47,8 +48,9 @@ button:active{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 55px 350px;
+    padding: 55px 10px;
 }
+
 
 .main-navbar a {
     display: block;
