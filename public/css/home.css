@@ -1,114 +1,137 @@
 @import "main.css";
 
 * {
-    margin: 0 auto;
-    box-sizing: border-box;
-    padding: 0;
-    font-family: var(--font-family);
-    list-style: none;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: var(--font-family);
+  list-style: none;
 }
 
 /*element styles*/
 
-body, html {
-    background-color:var(--main-bg-color);
-    color: var(--dark);
-    min-width:500px;
-    overflow: hidden;
+body,
+html {
+  background-color: var(--main-bg-color);
+  color: var(--dark);
+  min-width: 500px;
+  overflow: hidden;
 }
 
 #quote-sentence-container h1 {
-    font-size: 50px;
-    font-weight: 600;
-    line-height: 68px;    
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 68px;
+  margin-bottom: 5%;
 }
 
-button{
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    padding: 5px;
-    border-radius: 5px;
-    border: var(--main-border);
-    background-color: var(--main-bg-color);
-    color: var(--dark);
-    transition: transform 0.2s;
-    cursor: pointer;
+button {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding: 5px;
+  border-radius: 5px;
+  border: var(--main-border);
+  background-color: var(--main-bg-color);
+  color: var(--dark);
+  transition: transform 0.2s;
+  cursor: pointer;
 }
 
-button:hover{
-    transform: scale(1.08);
+button:hover {
+  transform: scale(1.08);
 }
 
-button:active{
-    transform: scale(1.04);
+button:active {
+  transform: scale(1.04);
 }
 
 /* navbar */
 
 .main-navbar {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 55px 0px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 55px 0px;
 }
-
 
 .main-navbar a {
-    display: block;
-    margin: 10px 40px 0;
-    cursor: pointer;
+  display: block;
+  margin: 10px 40px 0;
+  cursor: pointer;
 }
 
-a::after{
-    content: " ";
-    display: block;
-    border-radius: 100px;
-    background-color: var(--main-color);
-    width: 0;
-    height: 0;
-    transition: width 0.15s, height 0.15s;
+a::after {
+  content: " ";
+  display: block;
+  border-radius: 100px;
+  background-color: var(--main-color);
+  width: 0;
+  height: 0;
+  transition: width 0.15s, height 0.15s;
 }
-a:hover::after{
-    width: 100%;
-    height: 3px;
-}
-
-
-.main-navbar button{
-    background-color:var(--main-yellow);
-    font-size: 15px;
-    padding: 6px 10px;
-    color: var(--main-bg-color);
-    border: none;
-    outline: none;
+a:hover::after {
+  width: 100%;
+  height: 3px;
 }
 
-.flex-spacer{
-    flex-grow: 1;
+.main-navbar button {
+  background-color: var(--main-yellow);
+  font-size: 15px;
+  padding: 6px 10px;
+  color: var(--main-bg-color);
+  border: none;
+  outline: none;
+}
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+.d-flex {
+  display: flex;
+}
+.justify-content-center {
+  justify-content: center;
 }
 
 #main-title {
-    font-weight: bold;
+  font-weight: bold;
 }
-
 
 #main-title-container {
-    margin-right: 60px;
+  margin-right: 60px;
 }
 
-
 /* home page */
-#main-container{
-    max-width: 1200px;
-    padding: 20px;
+#main-container {
+  max-width: 1200px;
+  padding: 20px;
 }
 
 #quote-sentence-container {
-    position: relative;
-    top: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 75vh;
 }
 
+#quote-sentence-container p {
+  font-size: 20px;
+  margin-bottom: 10%;
+}
 
+#quote-sentence-container button {
+  background-color: var(--main-color);
+  font-size: 15px;
+  padding: 10px 10px;
+  color: var(--main-bg-color);
+  border: none;
+  outline: none;
+}
+
+#quote-sentence-container img {
+  width: 70%;
+}
