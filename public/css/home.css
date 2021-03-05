@@ -164,3 +164,76 @@ a:hover::after {
   position: relative;
   left: 200px;
 }
+
+/* graph string set */
+.graph-string-set {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+}
+
+.graph-string-set div {
+  position: absolute;
+}
+
+@keyframes falling {
+  0% {
+    opacity: 0;
+    top: -10%;
+    transform: translateX(20px) rotate(0deg);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  20% {
+
+    transform: translateX(-20px) rotate(45deg);
+
+  }
+
+  40% {
+
+    transform: translateX(-20px) rotate(90deg);
+
+  }
+
+  60% {
+    transform: translateX(20px) rotate(180deg);
+  }
+
+  80% {
+    transform: translateX(-20px) rotate(180deg);
+  }
+  100% {
+    top: 110%;
+    transform: translateX(-20px) rotate(225deg);
+  }
+}
+
+.graph-string-set div:nth-child(1){
+  left: 20%;
+  animation: falling 15s linear infinite;
+  animation-delay: -5s;
+}
+
+.graph-string-set div:nth-child(2){
+  position: absolute;
+  left: 500px;
+  animation: falling 20s linear infinite;
+  animation-delay: -3s;
+}
+
+.graph-string-set div:nth-child(3){
+  position: absolute;
+  left: 800px;
+  animation: falling 20s linear infinite;
+  animation-delay: 0s;
+}
+.graph-string-set div:nth-child(4){
+  position: absolute;
+  left: 1000px;
+  animation: falling 20s linear infinite;
+  animation-delay: 0s;
+}
