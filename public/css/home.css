@@ -15,7 +15,9 @@ html {
   background-color: var(--main-bg-color);
   color: var(--dark);
   min-width: 500px;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height:100%;
 }
 
 #quote-sentence-container h1 {
@@ -111,6 +113,7 @@ a:hover::after {
 #main-container {
   max-width: 1200px;
   padding: 20px;
+  overflow: hidden;
 }
 
 #quote-sentence-container {
@@ -164,6 +167,63 @@ a:hover::after {
   position: relative;
   left: 200px;
 }
+
+
+#home-section {
+   height: 100%;
+}
+
+/* trends */
+#trends-section{
+    padding: 50px 0;
+}
+
+#trends-header {
+    margin-bottom: 80px;
+}
+
+#trends-grid-container {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 40px;
+}
+
+.trends-grid{
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    background-color: var(--main-yellow);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.trends-grid button{
+    width: 80px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    margin: 10px;
+    border: none;
+    background: var(--dark);
+    color: var(--main-bg-color);
+}
+
+.trends-grid:nth-child(even) button{
+    background: var(--main-bg-color);
+    color: var(--dark);
+}
+
+.trends-grid:nth-child(odd) {
+    background-color: var(--main-color);
+    color: var(--main-bg-color);
+}
+
+
 
 /* graph string set */
 .graph-string-set {
