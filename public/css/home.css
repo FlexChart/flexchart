@@ -102,17 +102,13 @@ a:hover::after{
 
 /* home page */
 #main-container{
-    max-width: 800px;
+    max-width: 1200px;
     padding: 20px;
 }
 
-#home-section{
-
-}
-
 #quote-sentence-container {
-
+    position: relative;
+    top: 500px;
 }
-
 
 
