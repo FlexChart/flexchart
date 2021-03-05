@@ -80,7 +80,7 @@ a:hover::after {
 .main-navbar button {
   background-color: var(--main-yellow);
   font-size: 15px;
-  padding: 6px 10px;
+  padding: 6px 15px;
   color: var(--main-bg-color);
   border: none;
   outline: none;
@@ -93,6 +93,8 @@ a:hover::after {
 .d-flex {
   display: flex;
 }
+
+
 .justify-content-center {
   justify-content: center;
 }
@@ -112,26 +114,53 @@ a:hover::after {
 }
 
 #quote-sentence-container {
+  position: relative;
+  right: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.05fr 1fr;
   align-items: center;
   height: 75vh;
+  position: relative;
+  bottom: 25px;
 }
 
+
 #quote-sentence-container p {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 10%;
+  color: #757384;
+  position: relative;
+  top: 30px;
+  left: 5px;
+  opacity: 0.9;
+  line-height: 1.55;
 }
+
+#quote-sentence-container h1 {
+  font-size: 62px;
+  line-height: 1.32;
+  font-weight: bold;
+}
+
 
 #quote-sentence-container button {
   background-color: var(--main-color);
-  font-size: 15px;
   padding: 10px 10px;
   color: var(--main-bg-color);
   border: none;
   outline: none;
+  position: relative;
+  top: 60px;
+  width: 186px;
+  height: 64px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  left: 5px;
 }
 
-#quote-sentence-container img {
-  width: 70%;
+#home-data-img {
+  position: relative;
+  left: 200px;
 }
