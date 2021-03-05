@@ -168,15 +168,54 @@ a:hover::after {
 /* graph string set */
 .graph-string-set {
   position: absolute;
-  top: 0px;
-  height: 100%;
+  top: 0;
 }
 
 .graph-string-set div {
   position: absolute;
 }
 
-@keyframes falling {
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/*.graph-string-set div:nth-child(1){
+  position:absolute;
+  left: 200px;
+  top: 100px;
+  animation: fadeOut 3s;
+}
+
+
+.graph-string-set div:nth-child(2){
+  left:500px;
+  top: 200px;
+  animation: fadeOut 3s;
+}
+
+
+.graph-string-set div:nth-child(3){
+  left:800px;
+  top: 800px;
+  animation: fadeOut 3s;
+}
+
+
+.graph-string-set div:nth-child(4){
+  left:1000px;
+  top: 500px;
+  animation: fadeOut 3s;
+}
+*/
+
+/* @keyframes falling {
   0% {
     opacity: 0;
     top: -10%;
@@ -211,8 +250,10 @@ a:hover::after {
     transform: translateX(-20px) rotate(225deg);
   }
 }
+*/
 
-.graph-string-set div:nth-child(1){
+
+/*.graph-string-set div:nth-child(1){
   left: 20%;
   animation: falling 15s linear infinite;
   animation-delay: -5s;
@@ -237,3 +278,5 @@ a:hover::after {
   animation: falling 20s linear infinite;
   animation-delay: 0s;
 }
+*/
+
