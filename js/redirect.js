@@ -1,0 +1,1 @@
+location.replace("https://flexchart.github.io/flexchart/public")

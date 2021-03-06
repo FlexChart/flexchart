@@ -10,6 +10,7 @@
 
 /*element styles*/
 
+
 body,
 html {
   background-color: var(--main-bg-color);
@@ -26,6 +27,7 @@ html {
   line-height: 68px;
   margin-bottom: 5%;
 }
+
 
 .center-items {
   display: flex;
@@ -334,6 +336,28 @@ a:hover::after {
   }
 }
 
+/* menu */
+
+
+.menu-panel {
+  display:none;
+  width: auto;
+  height: auto;
+  background-color: var(--main-bg-color);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  margin-bottom: 50px;
+  border-radius: 8px;
+}
+
+.menu-panel-items {
+  margin: 50px;
+  cursor: pointer;
+}
+
+#sign-up-button-menu {
+  margin: 40px;
+}
+
 
 /* responsive */
 
@@ -360,4 +384,3 @@ a:hover::after {
     display:none;
   }
 }
-
