@@ -21,6 +21,7 @@
     <script defer src="/__/firebase/8.2.9/firebase-analytics.js"></script>
     <script defer src="/__/firebase/8.2.9/firebase-remote-config.js"></script>
     <script defer src="/__/firebase/8.2.9/firebase-performance.js"></script>
+    <script defer src="../js/navMenu.js" defer></script>
     <!--
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
@@ -44,6 +45,7 @@
                 <a class="nav-element" id="login-page">log in</a>
                 <div class="flex-spacer"></div>
                 <button id="sign-up-button">sign up</button>
+                <button id="menu-button">menu</button>
             </nav>
         </header>
         <section id="home-section">
@@ -62,7 +64,7 @@
                         it is accurate and efficient to use.</p>
                     <button>Create My Own</button>
                 </div>
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center" id="home-data-img-container">
                    <svg id="home-data-img" width="550" height="500" viewBox="0 0 500 252" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M25.6193 148.331H22.241V151.146H25.6193V148.331Z" fill="#E6E6E6"/>
                     <path d="M345.174 151.146H338.517V148.331H345.174V151.146ZM331.86 151.146H325.202V148.331H331.86V151.146ZM318.545 151.146H311.887V148.331H318.545V151.146ZM305.23 151.146H298.572V148.331H305.23V151.146ZM291.915 151.146H285.258V148.331H291.915V151.146ZM278.6 151.146H271.943V148.331H278.6L278.6 151.146ZM265.286 151.146H258.628V148.331H265.286V151.146ZM251.971 151.146H245.313V148.331H251.971V151.146ZM238.656 151.146H231.999V148.331H238.656V151.146ZM225.341 151.146H218.684V148.331H225.341L225.341 151.146ZM212.026 151.146H205.369V148.331H212.027L212.026 151.146ZM198.712 151.146H192.054V148.331H198.712L198.712 151.146ZM185.397 151.146H178.74V148.331H185.397L185.397 151.146ZM172.082 151.146H165.425V148.331H172.082L172.082 151.146ZM158.767 151.146H152.11V148.331H158.767L158.767 151.146ZM145.452 151.146H138.795V148.331H145.453L145.452 151.146ZM132.138 151.146H125.48V148.331H132.138L132.138 151.146ZM118.823 151.146H112.166V148.331H118.823L118.823 151.146ZM105.508 151.146H98.8508V148.331H105.508L105.508 151.146ZM92.1932 151.146H85.5361V148.331H92.1933L92.1932 151.146ZM78.8784 151.146H72.2213V148.331H78.8786L78.8784 151.146ZM65.5636 151.146H58.9063V148.331H65.5638L65.5636 151.146ZM52.2489 151.146H45.5916V148.331H52.2491L52.2489 151.146ZM38.9341 151.146H32.2769V148.331H38.9344L38.9341 151.146Z" fill="#E6E6E6"/>

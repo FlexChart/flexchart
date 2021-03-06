@@ -56,6 +56,10 @@ button:active {
   transform: scale(1.04);
 }
 
+#menu-button {
+  display: none;
+}
+
 /* scrollbar */
 
 
@@ -303,9 +307,9 @@ a:hover::after {
 }
 
 .footer-sentence {
-  position: absolute;
-  bottom:5px;
-  color: #BABABA
+  color: #BABABA;
+  margin-top:250px;
+
 }
 
 /* graph string set */
@@ -331,3 +335,28 @@ a:hover::after {
 }
 
 
+/* responsive */
+
+@media only screen and (max-width:1188px) {
+  #home-data-img-container {
+    display:none;
+  }
+
+  #quote-sentence-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menu-button {
+    display: block;
+  }
+
+  #sign-up-button {
+    display:none;
+  }
+
+  #about-page, #projects-page, #login-page {
+    display:none;
+  }
+}
