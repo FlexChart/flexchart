@@ -14,6 +14,7 @@ function showNavBar() {
         projectsPageButton.style.display = "block";
         loginPageButton.style.display = "block";
     } else {
+        menuIsOpened = false;
         aboutPageButton.style.display = "none";
         projectsPageButton.style.display = "none";
         loginPageButton.style.display = "none";
