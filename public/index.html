@@ -34,8 +34,8 @@
 </head>
 
 <body>
-    <main id="main-container">
-        <header>
+    <header>
+        <div style="position: relative;">
             <nav class="main-navbar" id="main-navbar">
                 <div id="main-title-container">
                     <h1 id="main-title">flexchart</h1>
@@ -47,7 +47,18 @@
                 <button id="sign-up-button">sign up</button>
                 <button id="menu-button">menu</button>
             </nav>
-        </header>
+            <div class="menu-panel">
+                <div class="menu-panel-items center-items">
+                    <a id="about-page-menu" class="menu-panel-items about-page">about</a>
+                    <a id="projects-page-menu" class="menu-panel-items projects-page">projects</a>
+                    <a id="login-page-menu" class="menu-panel-items login-page">log in</a>
+                    <button id="sign-up-button-menu" class="sign-up-button">sign up</button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <main id="main-container">
         <section id="home-section">
             <!--
             <div class="graph-string-set">
@@ -57,14 +68,6 @@
                 <div><img src="../img/graphstring4.png"></div>
             </div>
         -->
-            <div class="menu-panel ">
-                <div class="menu-panel-items-container center-items">
-                    <a id="about-page-menu" class="menu-panel-items about-page">about</a>
-                    <a id="projects-page-menu" class="menu-panel-items projects-page">projects</a>
-                    <a id="login-page-menu" class="menu-panel-items login-page">log in</a>
-                    <button id="sign-up-button-menu" class="sign-up-button">sign up</button>
-                </div>
-            </div>
             <div id="quote-sentence-container">
                 <div>
                     <h1 class="quote-sentence">Graph the Present,<br>Change the Future.</h1>
