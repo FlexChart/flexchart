@@ -360,6 +360,23 @@ a:hover::after {
   margin: 40px;
 }
 
+#sign-in-popup{
+  position: fixed;
+  top: 30%;
+  left: calc(50% - 150px);
+  z-index: 1000;
+  background-color: var(--main-bg-color);
+  box-shadow: 0px 0px 100px rgba(0,0,0,0.4);
+  border-radius: 8px;
+  padding: 20px;
+  overflow: hidden;
+  display: none;
+  width: 300px;
+  align-items: center;
+  flex-direction: column;
+}
+
+
 /* responsive */
 
 @media only screen and (max-width: 1188px) {

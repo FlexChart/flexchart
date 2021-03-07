@@ -8,29 +8,61 @@
 
     <title>FlexChart</title>
     <link rel="stylesheet" href="css/home.css">
-    <script src="js/randomizePosition.js" defer></script>
     <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.2.9/firebase-app.js"></script>
+    <script  src="/__/firebase/8.2.9/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.2.9/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.2.9/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.2.9/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.2.9/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.2.9/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.2.9/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.2.9/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.2.9/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.2.9/firebase-performance.js"></script>
-    <script defer src="js/navMenu.js" defer></script>
+    <script  src="/__/firebase/8.2.9/firebase-auth.js"></script>
+    <script  src="/__/firebase/8.2.9/firebase-firestore.js"></script>
+    <script  src="/__/firebase/8.2.9/firebase-analytics.js"></script>
+    <script  src="/__/firebase/8.2.9/firebase-remote-config.js"></script>
+    <script  src="/__/firebase/8.2.9/firebase-performance.js"></script>
+    <script  src="js/navMenu.js" defer></script>
     <!--
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyDUk_4hKj1qkxUijYGy7AV3yTGHY0I9yvg",
+        authDomain: "flexchart-web.firebaseapp.com",
+        projectId: "flexchart-web",
+        storageBucket: "flexchart-web.appspot.com",
+        messagingSenderId: "369520579340",
+        appId: "1:369520579340:web:217a7ba90c7d57dcbbaf29",
+        measurementId: "G-53HTGKCNT8"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
 
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <!--Don't remove-->
-    <style></style>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.7.3/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.7.3/firebase-ui-auth.css" />
+    <script type="text/javascript">
+        // FirebaseUI config.
 
+        var uiConfig = {
+            signInSuccessUrl: '/',
+            signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            ],
+            // tosUrl and privacyPolicyUrl accept either url string or a callback
+            // function.
+            // Terms of service url/callback.
+            // Privacy policy url/callback.
+        };
+
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+    <script src="js/auth.js"></script>
 </head>
 
 <body>
@@ -60,6 +92,7 @@
     </header>
     <main id="main-container">
         <section id="home-section">
+
             <!--
             <div class="graph-string-set">
                 <div><img src="../img/graphstring1.png"></div>
@@ -409,6 +442,10 @@
             <p class="footer-sentence">A big thank you to all the developers :)</p>
         </div>
     </footer>
+    <div id="sign-in-popup">
+        <div id="firebaseui-auth-container"></div>
+        <button id="sign-out-button" onclick="firebase.auth().signOut()">Sign Out</button>
+    </div>
 </body>
 
 </html>

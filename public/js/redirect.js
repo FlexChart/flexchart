@@ -1,1 +1,1 @@
-location.replace("https://flexchart.github.io/flexchart/public")
+location.replace(`${window.location.origin}/public`)

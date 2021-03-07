@@ -9,10 +9,10 @@ window.onresize = showMenuPanel;
 
 
 function showMenuPanel() {
-    if (navbarSize.clientWidth == 1160) {
+    if (navbarSize.clientWidth <= 1160) {
         menuPanel.style.display = "none";
         menuPanel.style.display = "none";
-        menuButton.innerHTML = "menu";
+        menuButton.innerHTML = displayName ? displayName : "menu";
         menuButton.style.backgroundColor = "#FDD17A";
         menuIsOpened = false;
     }
@@ -27,7 +27,7 @@ menuButton.addEventListener("click", () => {
     } else {
         menuIsOpened = false;
         menuPanel.style.display = "none";
-        menuButton.innerHTML = "menu";
+        menuButton.innerHTML = displayName ? displayName : "menu";
         menuButton.style.backgroundColor = "#FDD17A";
     };
 })
