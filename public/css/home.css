@@ -353,12 +353,19 @@ a:hover::after {
 
 .menu-panel-items {
   flex-direction: column;
-  margin: 50px;
+  margin: 30px;
   cursor: pointer;
 }
 
 #sign-up-button-menu {
   margin: 40px;
+  background-color: var(--main-yellow);
+  font-size: 15px;
+  padding: 6px 15px;
+  color: var(--main-bg-color);
+  border: none;
+  outline: none;
+
 }
 
 #sign-in-popup{
