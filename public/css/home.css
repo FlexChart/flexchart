@@ -153,6 +153,7 @@ a:hover::after {
 }
 
 #quote-sentence-container {
+  margin-top: 90px;
   position: relative;
   right: 10px;
   display: grid;
