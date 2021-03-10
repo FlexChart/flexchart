@@ -269,7 +269,7 @@ a:hover::after {
 /* Steps Section */
 
 #steps-section {
-  height: 80vh;
+  height: 90vh;
   margin-bottom: 160px;
 }
 
@@ -300,8 +300,9 @@ a:hover::after {
 /* credits/footer */
 
 #credit-container {
+  padding: 10px 0;
   width: 100%;
-  height: 58vh;
+  height: 65vh;
   background-color: #f0faeb;
 }
 
