@@ -239,6 +239,12 @@ a:hover::after {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.trends-image-holder {
+  padding: 5px 0;
+  height: 120px;
+  display: flex;
+}
+
 .trends-grid button {
   width: 80px;
   font-size: 14px;
@@ -365,16 +371,15 @@ a:hover::after {
   color: var(--main-bg-color);
   border: none;
   outline: none;
-
 }
 
-#sign-in-popup{
+#sign-in-popup {
   position: fixed;
   top: 30%;
   left: calc(50% - 150px);
   z-index: 1000;
   background-color: var(--main-bg-color);
-  box-shadow: 0px 0px 100px rgba(0,0,0,0.4);
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.4);
   border-radius: 8px;
   padding: 20px;
   overflow: hidden;
@@ -383,7 +388,6 @@ a:hover::after {
   align-items: center;
   flex-direction: column;
 }
-
 
 /* responsive */
 
