@@ -17,6 +17,34 @@ html {
     background-color: #FCFCFC;
 }
 
+
+button {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding: 5px;
+  border-radius: 5px;
+  border: var(--main-border);
+  background-color: var(--main-bg-color);
+  color: var(--dark);
+  transition: transform 0.2s;
+  cursor: pointer;
+  z-index: 2;
+  outline: none;
+}
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+button:hover {
+  transform: scale(1.08);
+}
+
+button:active {
+  transform: scale(1.04);
+}
+
 .center-items {
     display: flex;
     justify-content:center;
@@ -27,6 +55,7 @@ h1 {
     font-size: 25px;
     line-height: 34px;
 }
+
 
 /* navbar */
 
@@ -66,7 +95,7 @@ h1 {
 }
 
 #setting-icon:hover{
-    transition: all 0.4s;
+    transition: all 0.3s;
     fill:#4d4d4d;
 }
 
@@ -80,4 +109,75 @@ h1 {
     color: #6F9451;
     font-weight: 600;
 
+}
+
+/* main page */
+
+#user-projects-page {
+  max-width: 1050px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+#main-heading {
+    margin-top: 25px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+#greet-title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 41px;
+}
+
+#all-projects-page-btn {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+    background-color: var(--main-color);
+    padding: 15px;
+    position: relative;
+    bottom: 10px;
+    border-radius: 6px;
+}
+
+.project-box {
+    margin-top:80px;
+    margin-left: 25px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    border: 1px solid #E6E6E6;
+}
+
+#trending-project-box {
+    width: 990px;
+    height: 300px;
+}
+
+#trend-section-header-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#trend-section-header, #refresh-trend-section-btn {
+    margin: 30px;
+}
+
+#refresh-trend-section-btn {
+    background: none;
+    border: none;
+}
+
+.section-header {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    margin-top: 3px;
 }
