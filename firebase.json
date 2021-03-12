@@ -9,6 +9,11 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "rewrites":[{
+        "source": "/user/**",
+        "destination":"/user"
+    }]
+
   }
 }
