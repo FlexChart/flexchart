@@ -56,7 +56,12 @@ h1 {
     line-height: 34px;
 }
 
-
+.line {
+    position: relative;
+    width: 100%;
+    border: 1px solid #E6E6E6;
+    bottom: 20px;
+}
 /* navbar */
 
 .main-navbar {
@@ -155,9 +160,11 @@ h1 {
     border: 1px solid #E6E6E6;
 }
 
+/* trend-project-box */
+
 #trending-project-box {
     width: 990px;
-    height: 300px;
+    height: 350px;
 }
 
 #trend-section-header-container {
@@ -180,4 +187,11 @@ h1 {
     font-size: 20px;
     line-height: 27px;
     margin-top: 3px;
+}
+
+
+#trend-project-1 {
+    margin: 25px;
+    display: flex;
+    flex-direction: row;
 }
