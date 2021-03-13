@@ -163,8 +163,8 @@ h1 {
 /* trend-project-box */
 
 #trending-project-box {
-    width: 990px;
-    height: 350px;
+    width: 98%;
+    height: 300px;
 }
 
 #trend-section-header-container {
@@ -191,7 +191,41 @@ h1 {
 
 
 #trend-project-1 {
-    margin: 25px;
+    margin: 35px;
     display: flex;
     flex-direction: row;
+
 }
+
+#trend-img-title-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 10px;
+}
+
+.project-box-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+}
+
+
+#trend-project-title {
+    margin: 20px;
+}
+
+.view-btn {
+    position:relative;
+    width: 18%;
+    background: #89AE6B;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: white;
+    height: 60px;
+}
+
+/* Recent Project Box */
