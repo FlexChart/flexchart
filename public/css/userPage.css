@@ -1,7 +1,5 @@
 @import "main.css";
 
-
-
 /* setup */
 
 * {
@@ -14,9 +12,8 @@
 
 body,
 html {
-    background-color: #FCFCFC;
+  background-color: #fcfcfc;
 }
-
 
 button {
   appearance: none;
@@ -46,74 +43,69 @@ button:active {
 }
 
 .center-items {
-    display: flex;
-    justify-content:center;
-    align-items:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
-    font-size: 25px;
-    line-height: 34px;
+  font-size: 25px;
+  line-height: 34px;
 }
 
 .line {
-    position: relative;
-    width: 100%;
-    border: 1px solid #E6E6E6;
-    bottom: 20px;
+  position: relative;
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  bottom: 20px;
 }
 /* navbar */
 
 .main-navbar {
-    background-color: white;
-    box-shadow: 0px 0.1px 0px rgba(0, 0, 0, 0.25);
-    width: 100%;
-    height: 85px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  background-color: white;
+  box-shadow: 0px 0.1px 0px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 85px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .main-navbar a {
-    display: block;
-    margin: 10px 40px 0;
-    cursor: pointer;
-    font-size: 20px;
-    line-height: 27px;
-    color:#777777;
-    font-weight: 400;
+  display: block;
+  margin: 10px 40px 0;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 27px;
+  color: #777777;
+  font-weight: 400;
 }
 
 .main-navbar a:nth-child(2) {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
-
 
 .main-navbar a:nth-child(3) {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
-
 
 .main-navbar a:hover {
-    transition: all 0.4s;
-    color: black;
+  transition: all 0.4s;
+  color: black;
 }
 
-#setting-icon:hover{
-    transition: all 0.3s;
-    fill:#4d4d4d;
+#setting-icon:hover {
+  transition: all 0.3s;
+  fill: #4d4d4d;
 }
-
 
 #main-title-container {
-    margin-left: 60px;
+  margin-left: 60px;
 }
 
-
 #main-title {
-    color: #6F9451;
-    font-weight: 600;
-
+  color: #6f9451;
+  font-weight: 600;
 }
 
 /* main page */
@@ -125,107 +117,127 @@ h1 {
 }
 
 #main-heading {
-    margin-top: 25px;
-    margin-left: 25px;
-    display: flex;
-    flex-direction: row;
+  margin-top: 25px;
+  margin-left: 25px;
+  display: flex;
+  flex-direction: row;
 }
 
-
 #greet-title {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 35px;
-    line-height: 41px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 41px;
 }
 
 #all-projects-page-btn {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 27px;
-    color: #FFFFFF;
-    background-color: var(--main-color);
-    padding: 15px;
-    position: relative;
-    bottom: 10px;
-    border-radius: 6px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #ffffff;
+  background-color: var(--main-color);
+  padding: 15px;
+  position: relative;
+  bottom: 10px;
+  border-radius: 6px;
 }
 
 .project-box {
-    margin-top:80px;
-    margin-left: 25px;
-    background: #FFFFFF;
-    border-radius: 6px;
-    border: 1px solid #E6E6E6;
+  margin-top: 80px;
+  margin-left: 25px;
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #e6e6e6;
 }
 
 /* trend-project-box */
 
 #trending-project-box {
-    width: 98%;
-    height: 300px;
+  width: 98%;
+  height: 300px;
 }
 
 #trend-section-header-container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
-#trend-section-header, #refresh-trend-section-btn {
-    margin: 30px;
+#trend-section-header,
+#refresh-trend-section-btn {
+  margin: 30px;
 }
 
 #refresh-trend-section-btn {
-    background: none;
-    border: none;
+  background: none;
+  border: none;
 }
 
 .section-header {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 27px;
-    margin-top: 3px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  margin-top: 3px;
 }
 
-
 #trend-project-1 {
-    margin: 35px;
-    display: flex;
-    flex-direction: row;
-
+  margin: 35px;
+  display: flex;
+  flex-direction: row;
 }
 
 #trend-img-title-container {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    left: 10px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 10px;
 }
 
 .project-box-title {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 27px;
-    color: #000000;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
 }
 
-
 #trend-project-title {
-    margin: 20px;
+  margin: 20px;
 }
 
 .view-btn {
-    position:relative;
-    width: 18%;
-    background: #89AE6B;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 27px;
-    color: white;
-    height: 60px;
+  position: relative;
+  width: 18%;
+  background: #89ae6b;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: white;
+  height: 60px;
 }
 
 /* Recent Project Box */
+
+/* create new project-box */
+
+.create-new-project {
+  display: flex;
+  border-top: #e6e6e6 solid 1px;
+}
+.create-new-project-title {
+  font-weight: normal;
+  display: inline-flex;
+  margin-right: 40px;
+  color: #4d4d4d;
+}
+.new-btn {
+  margin: 30px 0;
+  width: 40px;
+  background: #fdd17a;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  height: 40px;
+}
