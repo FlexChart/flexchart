@@ -19,6 +19,7 @@ firebase.auth().onAuthStateChanged(user=>{
         window.uid = undefined; 
         window.phoneNumber = undefined; 
         window.providerData = undefined; 
+        window.location.replace(window.location.origin);
     }
 })
 
