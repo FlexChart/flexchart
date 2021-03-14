@@ -13,6 +13,7 @@
 body,
 html {
   background-color: #fcfcfc;
+  height:130vh;
 }
 
 button {
@@ -224,12 +225,16 @@ h1 {
 .create-new-project {
   display: flex;
   border-top: #e6e6e6 solid 1px;
+
 }
 .create-new-project-title {
-  font-weight: normal;
   display: inline-flex;
   margin-right: 40px;
-  color: #4d4d4d;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 34px;
+  color: #777777;
 }
 .new-btn {
   margin: 30px 0;
