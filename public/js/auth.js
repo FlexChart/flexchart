@@ -22,7 +22,6 @@ firebase.auth().onAuthStateChanged(user=>{
         document.querySelector("#menu-button").innerHTML = displayName
         document.querySelector("#sign-up-button").innerHTML = displayName
         document.querySelector("#sign-up-button-menu").innerHTML = displayName
-        window.location.replace(window.location.origin + "//user");
     }else{
         document.querySelector("#firebaseui-auth-container").style.display = "block"
         document.querySelector("#sign-out-button").style.display = "none"
