@@ -182,13 +182,14 @@ h1 {
   margin-top: 3px;
 }
 
-#trend-project-1 {
+.trend-project {
   margin: 35px;
   display: flex;
+  align-items: center;
   flex-direction: row;
 }
 
-#trend-img-title-container {
+.trend-img-title-container {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -202,7 +203,7 @@ h1 {
   color: #000000;
 }
 
-#trend-project-title {
+.project-box-title {
   margin: 20px;
 }
 

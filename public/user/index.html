@@ -7,6 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlexChart</title>
     <link rel="stylesheet" href="../css/userPage.css">
+    <script src="/__/firebase/8.2.9/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script src="/__/firebase/8.2.9/firebase-auth.js"></script>
+    <script src="/__/firebase/8.2.9/firebase-firestore.js"></script>
+    <script src="/__/firebase/8.2.9/firebase-analytics.js"></script>
+    <script src="/__/firebase/8.2.9/firebase-remote-config.js"></script>
+    <script src="/__/firebase/8.2.9/firebase-performance.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDUk_4hKj1qkxUijYGy7AV3yTGHY0I9yvg",
+            authDomain: "flexchart-web.firebaseapp.com",
+            projectId: "flexchart-web",
+            storageBucket: "flexchart-web.appspot.com",
+            messagingSenderId: "369520579340",
+            appId: "1:369520579340:web:217a7ba90c7d57dcbbaf29",
+            measurementId: "G-53HTGKCNT8"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <script src="js/auth.js"> </script>
+    <script src="js/content.js"> </script>
 </head>
 
 <body>
@@ -48,8 +74,8 @@
                 </button>
             </div>
             <div class="line"></div>
-            <div id="trend-project-1">
-                <div id="trend-img-title-container">
+            <div class="trend-project">
+                <div class="trend-img-title-container">
                     <img src="../img/covid.png" alt="[Trend]">
                     <h3 id="trend-project-title" class="project-box-title">COVID-19 Data</h3>
                 </div>
@@ -72,32 +98,14 @@
                 </button>
             </div>
             <div class="line"></div>
-            <div id="trend-project-1">
-                <div id="trend-img-title-container">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/flexchart-web.appspot.com/o/trending_clothe.svg?alt=media&token=76f81abd-c3ca-4c77-bd6a-fd35ff464397"
-                        alt="[Trend]">
-                    <h3 id="trend-project-title" class="project-box-title">Favorite Clothing Data</h3>
-                </div>
-                <div class="flex-spacer"></div>
-                <button id="view-trend-project" class="view-btn">view</button>
+            <div id="project-container">
             </div>
-            <br>
-            <div class="line"></div>
-            <div id="trend-project-1">
-                <div id="trend-img-title-container">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/flexchart-web.appspot.com/o/trending_games.svg?alt=media&token=e11f61fa-aebf-440d-8b82-3ae03d8d6175"
-                        alt="[Trend]">
-                    <h3 id="trend-project-title" class="project-box-title">Best Game 2021</h3>
+                <div class="create-new-project">
+                    <div>
+                        <h3 class="create-new-project-title">Create New Project</h3>
+                        <button class="new-btn">+</button>
+                    </div>
                 </div>
-                <div class="flex-spacer"></div>
-                <button id="view-trend-project" class="view-btn">view</button>
-            </div>
-            <div class="create-new-project">
-                <div>
-                    <h3 class="create-new-project-title">Create New Project</h3>
-                    <button class="new-btn">+</button>
-                </div>
-            </div>
     </main>
 </body>
 

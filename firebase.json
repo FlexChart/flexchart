@@ -10,10 +10,11 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites":[{
+    "rewrites": [
+      {
         "source": "/user/**",
-        "destination":"/user"
-    }]
-
+        "destination": "/user/index.html"
+      }
+    ]
   }
 }
