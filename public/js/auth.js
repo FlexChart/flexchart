@@ -30,3 +30,4 @@ firebase.auth().onAuthStateChanged(user=>{
         document.querySelector("#sign-up-button-menu").innerHTML = "sign up"
     }
 })
+
