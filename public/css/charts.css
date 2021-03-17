@@ -1,0 +1,46 @@
+@import "main.css";
+
+.chart-covid-container {
+  max-width: 1200px;
+  padding: 20px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  color: var(--dark);
+}
+.box-shadow-class {
+  box-shadow: 2px 2px 15px 0px var(--lighter-grey);
+  padding: 15px 30px 15px 15px;
+  border: solid 1px var(--lighter-grey);
+  border-radius: 30px;
+}
+
+.view-btn-charts {
+  background: var(--lighter-grey);
+  width: 200px;
+  border-radius: 6px;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 10px 10px;
+  padding: 5px 40px;
+  color: var(--dark);
+  text-align: center;
+}
+
+button:hover {
+  background-color: var(--main-color);
+  color: var(--lighter-grey);
+  border: 5px solid #92b577;
+}
+
+.covid-canvas {
+  margin: 15px;
+  padding: 0 15px;
+  height: 75vh;
+}
+
+.chart-box {
+  width: 100%;
+  height: 35vh;
+  display: inline-flex;
+}
