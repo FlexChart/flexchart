@@ -21,7 +21,7 @@ function updateProjectsList(querySnapshot){
                     <h3 class="project-box-title">${doc.data().name}</h3>
                 </div>
                 <div class="flex-spacer"></div>
-                <button class="view-btn">view</button>
+                <button class="view-btn" onclick="window.location.href = '/chart/${doc.id}'">view</button>
             </div>
             `)
     })

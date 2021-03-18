@@ -1,3 +1,5 @@
+let firestore = firebase.firestore()
+let unsubscribeSidebarList
 firebase.auth().onAuthStateChanged(user=>{
     if(user){
         console.log("signed in")
@@ -8,8 +10,9 @@ firebase.auth().onAuthStateChanged(user=>{
         window.uid = user.uid;
         window.phoneNumber = user.phoneNumber;
         window.providerData = user.providerData;
+        unsubscribeSidebarList = firestore.collection("charts").where("owner","==",uid).onSnapshot(updateSidebarList)
     }else{
-        unsubscribeProjectsList?.()
+        unsubscribeSidebarList?.()
         window.displayName = undefined; 
         window.email = undefined; 
         window.emailVerified = undefined; 

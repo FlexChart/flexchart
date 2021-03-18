@@ -1,0 +1,12 @@
+window.chartId = window.location.pathname.split('/')[2];
+console.log(chartId)
+
+function updateSidebarLists(querySnapshot){
+    let items = querySnapshot.docs.map((doc)=>{
+        return(`
+            <li class="sidebar-list-item" id="${doc.id == chartId ? "sidebar-selected" : ""}">
+            </li>
+            `)
+    })
+    document.querySelector("#sidebar-container").innerHTML = items.join('  ')
+}
