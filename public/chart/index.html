@@ -31,6 +31,8 @@
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.css">
     <script src="js/auth.js"> </script>
     <script src="js/content.js"> </script>
 </head>
@@ -61,6 +63,9 @@
             </div>
             <div id="chart-container" class="section-container">
                 <h2 id="chart-title">--</h2>
+                <canvas id="chart-canvas">
+                    
+                </canvas>
             </div>
             <div id="table-container" class="section-container">
                 table

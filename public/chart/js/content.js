@@ -69,6 +69,61 @@ function editChartName(){
             name: name
         })
     }
-
-
 }
+
+
+
+//chart.js
+
+function* getRandomColor(){
+    let i = 0;
+    let backgroundColors = ["#89AE6B40","#FDD17A40","#EF696940"]
+    let borderColors = ["#89AE6B","#E2C17E","#CD625B"]
+    let hoverBackgroundColors = ["#89AE6B80","#FDD17A80","#EF696980"]
+    while(true){
+        yield backgroundColors[i]
+        yield borderColors[i]
+        yield hoverBackgroundColors[i]
+        i = (i>=backgroundColors.lenght) ? 0 : i+1; 
+    }
+}
+
+var randomColor = getRandomColor();
+
+window.addEventListener("load", ()=>{
+
+    var ctx = document.querySelector("#chart-canvas").getContext("2d")
+    var chart = new Chart(ctx,{
+        type: 'line',
+        data: {
+            labels: [1, 2, 3, 4, 5, 6],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor:randomColor.next().value,
+                borderColor:randomColor.next().value,
+                hoverBackgroundColor:randomColor.next().value,
+                borderWidth: 1
+            },{
+                label: '# of Votes',
+                data: [15, 12, 4, 2, 5, 2],
+                backgroundColor: randomColor.next().value,
+                borderColor:randomColor.next().value,
+                hoverBackgroundColor:randomColor.next().value,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    })
+})
+
+
+
