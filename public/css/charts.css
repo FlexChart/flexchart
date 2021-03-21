@@ -44,3 +44,9 @@ button:hover {
   height: 35vh;
   display: inline-flex;
 }
+.chart-box-bymarket {
+  max-width: 70vh;
+  max-height: 30vh;
+  display: flex;
+  padding-top: 10px;
+}
