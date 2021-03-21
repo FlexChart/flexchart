@@ -23,4 +23,3 @@ firebase.auth().onAuthStateChanged(user=>{
         window.location.replace(window.location.origin);
     }
 })
-
