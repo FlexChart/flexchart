@@ -5,12 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/userPage.css">
-    <link rel="stylesheet" href="../css/charts.css">
+    <link rel="stylesheet" href="../../css/userPage.css">
+    <link rel="stylesheet" href="../../css/charts.css">
     <title>Covid Chart | Flexchart</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
         integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
+    <script src="/__/firebase/8.2.9/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script src="/__/firebase/8.2.9/firebase-auth.js"></script>
+    <script src="/__/firebase/8.2.9/firebase-firestore.js"></script>
+    <script src="/__/firebase/8.2.9/firebase-analytics.js"></script>
+    <script src="/__/firebase/8.2.9/firebase-remote-config.js"></script>
+    <script src="/__/firebase/8.2.9/firebase-performance.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDUk_4hKj1qkxUijYGy7AV3yTGHY0I9yvg",
+            authDomain: "flexchart-web.firebaseapp.com",
+            projectId: "flexchart-web",
+            storageBucket: "flexchart-web.appspot.com",
+            messagingSenderId: "369520579340",
+            appId: "1:369520579340:web:217a7ba90c7d57dcbbaf29",
+            measurementId: "G-53HTGKCNT8"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    </script>
 </head>
 
 <body>
@@ -60,7 +84,7 @@
             </div>
         </section>
     </main>
-    <script src="../js/chart_covid.js" />
-    </body>
+    <script defer src="/js/chart_covid.js"> </script>
+</body>
 
 </html>
