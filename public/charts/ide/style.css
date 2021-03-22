@@ -9,3 +9,7 @@
   grid-template-columns: 1fr 5fr;
   color: var(--dark);
 }
+
+.graph-container-item {
+  width: 60vw;
+}
