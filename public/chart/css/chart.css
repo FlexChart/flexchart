@@ -190,3 +190,26 @@ main{
 #chart-info-popup button:hover{
     background-color:var(--lighter-grey);
 }
+
+
+/*Table*/
+
+#data-table {
+    border-spacing: 0px;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid white;
+    empty-cells: show;
+}
+
+#data-table td{
+    border: 1px solid var(--lighter-grey);
+    min-width: 40px;
+    height: 2em;
+    padding: 5px;
+    text-align: right;
+    margin: 0;
+}
+
+
