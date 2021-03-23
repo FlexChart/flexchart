@@ -57,9 +57,6 @@ button:active {
   transform: scale(1.04);
 }
 
-#menu-button {
-  display: none;
-}
 
 /* scrollbar */
 
@@ -132,12 +129,15 @@ a:hover::after {
 /* main */
 
 #main-container {
+  margin-top: 120px;
   max-width: 1200px;
   padding: 20px;
   overflow: hidden;
 }
 
 #main-text-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin-top: 90px;
   position: relative;
   right: 10px;
@@ -169,4 +169,20 @@ a:hover::after {
   color: var(--main-bg-color);
   border: none;
   outline: none;
+}
+
+#main-text-container a::after {
+  width:0;
+}
+
+
+
+#computer-svg {
+  position: relative;
+  top: 70px;
+  left: 45px;
+}
+
+#about-page {
+  font-weight: 600;
 }
