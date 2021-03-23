@@ -1,7 +1,7 @@
 window.chartId = window.location.pathname.split('/')[2];
 console.log(chartId)
 let chartName = ""
-
+let firebaseTableData;
 function updateSidebarList(querySnapshot){
     let items = querySnapshot.docs.map((doc)=>{
         return(`
@@ -17,26 +17,43 @@ function updateSidebarList(querySnapshot){
 
 firestore.collection("charts").doc(chartId).onSnapshot((doc)=>{
     chartName = doc.data().name
+    firebaseTableData = doc.data().data ?? {};
+    generateTable(doc.data().data ?? {});
     document.querySelector("#chart-title").innerHTML = doc.data().name;
 },()=>{
     document.querySelector("#chart-title").innerHTML = "Not Found"
 })
 
+
+//table thing
+var previousFocusId;
 function generateTable(data){
-    let columns = Object.entries(data)?.length ?? 0;
-    let rows = Object.entries(data)[0]?.[1].length ?? 0
+
+    let rows = 0;
+    let columns = 0;
+    for(let i of Object.entries(data)){
+        if(parseInt(i[0])+1>columns){
+            columns = parseInt(i[0])+1
+        }
+        for(let j of Object.entries(i[1])){
+            if(parseInt(j[0])+1>rows){
+                rows = parseInt(j[0])+1 
+            }
+        }
+    }
+    console.log(`rows:${rows}  columns:${columns}`)
     let generateRows = 
                 (i)=>{
                     let cells = "";
-                    for(let j = 0; j<columns + 1; j++){
-                        cells += "<td>" + ((Object.entries(data)[j]?.[1]?.[i]) ?? "") + "</td>"
+                    for(let j = 0; j<columns + 2; j++){
+                        cells += "<td id='tablecell"+j+"-"+i+"'contenteditable='true' onfocus='previousFocusId = \"tablecell"+j+"-"+i+"\"' onblur='updateTableData("+i+", "+j+", this.innerText)'>" + ((data[j]?.[i]) ?? "") + "</td>"
                     }
                     return cells;
                 }
 
     let table = ()=>{
         let tableString = ""
-        for(let i = 0; i<rows+5; i++){
+        for(let i = 0; i<rows+4; i++){
             tableString += `<tr>${
                 generateRows(i)
             }</tr>`
@@ -44,8 +61,28 @@ function generateTable(data){
         return `<table id="data-table">${tableString}</table>`
     }
     document.querySelector("#table-container").innerHTML = table();
-
+    document.querySelector(`#${previousFocusId}`)?.focus();
 }
+
+function updateTableData(y,x,data){
+    let tableData = firebaseTableData;
+    if(data != tableData[x]?.[y]){
+        if(!tableData[x]){
+            tableData[x] = {}
+        }
+        tableData[x][y] = data;
+        if(tableData[x][y].trim() == ""){
+            delete tableData[x][y]
+        }
+        if(Object.entries(tableData[x]).length == 0){
+            delete tableData[x]
+        }
+        firestore.collection("charts").doc(chartId).update({
+            data:tableData
+        })
+    }
+}
+
 function addChart(){
     let name=prompt("Enter name of chart:", "New Chart").trim();
     if(name){
@@ -65,7 +102,6 @@ window.addEventListener("load", ()=>{
             element.style.pointerEvents = "none"
         }
     })
-    generateTable({1:[1,2],2:[1,2,3,"this is a very long piece of text and something"]})
 })
 
 function togglePopup(){

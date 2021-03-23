@@ -193,6 +193,9 @@ main{
 
 
 /*Table*/
+#table-container{
+    overflow: scroll;
+}
 
 #data-table {
     border-spacing: 0px;
@@ -201,6 +204,7 @@ main{
     overflow: hidden;
     border: 1px solid white;
     empty-cells: show;
+    overflow: scroll;
 }
 
 #data-table td{
