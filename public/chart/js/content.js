@@ -22,7 +22,30 @@ firestore.collection("charts").doc(chartId).onSnapshot((doc)=>{
     document.querySelector("#chart-title").innerHTML = "Not Found"
 })
 
+function generateTable(data){
+    let columns = Object.entries(data)?.length ?? 0;
+    let rows = Object.entries(data)[0]?.[1].length ?? 0
+    let generateRows = 
+                (i)=>{
+                    let cells = "";
+                    for(let j = 0; j<columns + 1; j++){
+                        cells += "<td>" + ((Object.entries(data)[j]?.[1]?.[i]) ?? "") + "</td>"
+                    }
+                    return cells;
+                }
 
+    let table = ()=>{
+        let tableString = ""
+        for(let i = 0; i<rows+5; i++){
+            tableString += `<tr>${
+                generateRows(i)
+            }</tr>`
+        }
+        return `<table id="data-table">${tableString}</table>`
+    }
+    document.querySelector("#table-container").innerHTML = table();
+
+}
 function addChart(){
     let name=prompt("Enter name of chart:", "New Chart").trim();
     if(name){
@@ -42,6 +65,7 @@ window.addEventListener("load", ()=>{
             element.style.pointerEvents = "none"
         }
     })
+    generateTable({1:[1,2],2:[1,2,3,"this is a very long piece of text and something"]})
 })
 
 function togglePopup(){
@@ -84,7 +108,7 @@ function* getRandomColor(){
         yield backgroundColors[i]
         yield borderColors[i]
         yield hoverBackgroundColors[i]
-        i = (i>=backgroundColors.lenght) ? 0 : i+1; 
+        i = (i>=backgroundColors.length) ? 0 : i+1; 
     }
 }
 

@@ -1,6 +1,5 @@
 @import "../css/main.css";
 
-
 * {
   margin: 0 auto;
   box-sizing: border-box;
@@ -62,8 +61,6 @@ button:active {
   display: none;
 }
 
-
-
 /* scrollbar */
 
 ::-webkit-scrollbar {
@@ -112,15 +109,6 @@ a:hover::after {
   height: 3px;
 }
 
-.main-navbar button {
-  background-color: var(--main-yellow);
-  font-size: 15px;
-  padding: 6px 15px;
-  color: var(--main-bg-color);
-  border: none;
-  outline: none;
-}
-
 .flex-spacer {
   flex-grow: 1;
 }
@@ -149,20 +137,36 @@ a:hover::after {
   overflow: hidden;
 }
 
-
 #main-text-container {
   margin-top: 90px;
   position: relative;
   right: 10px;
 }
 
-#computer-svg {
-  position: absolute;
-  right: 0;
-  margin-right: 300px;
-  margin-top: 100px;
+#main-text-container p {
+  font-size: 22px;
+  margin-bottom: 10%;
+  color: #757384;
+  position: relative;
+  top: 30px;
+  left: 5px;
+  opacity: 0.9;
+  line-height: 1.55;
+  padding-right: 10%;
 }
 
+#main-text-container h1 {
+  font-size: 62px;
+  line-height: 1.32;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
 
-#page-title {
+#main-text-container button {
+  background-color: var(--main-color);
+  font-size: 15px;
+  padding: 10px 60px;
+  color: var(--main-bg-color);
+  border: none;
+  outline: none;
 }

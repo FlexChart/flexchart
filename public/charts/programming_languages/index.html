@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>IDE Chart | Flexchart</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+        integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="main-navbar">
+            <div id="main-title-container">
+                <h1 id="main-title">FlexChart</h1>
+            </div>
+            <a class="nav-element projects-page" id="projects-page">Projects</a>
+            <a class="nav-element contribute-page" id="contribute-page">Contribute</a>
+            <a class="nav-element setting-page" id="setting-page">
+                <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="setting-icon"
+                        d="M25.2774 16.9738C24.8169 16.636 24.5418 16.0935 24.5418 15.522C24.5418 14.9504 24.8169 14.4079 25.2767 14.0708L27.4041 12.5111C27.7432 12.2618 27.8833 11.8233 27.7509 11.4235C27.2033 9.77792 26.3372 8.27701 25.176 6.96144C24.8963 6.64628 24.4455 6.54682 24.06 6.71603L21.6646 7.76938C21.1428 7.9993 20.535 7.96636 20.0397 7.68026C19.545 7.3948 19.213 6.88588 19.1504 6.31819L18.8623 3.68836C18.8165 3.26986 18.5052 2.92886 18.0931 2.84426C16.4159 2.50132 14.6534 2.49551 12.9465 2.8378C12.5319 2.92111 12.2199 3.26211 12.1741 3.68255L11.8886 6.29559C11.826 6.86392 11.494 7.37284 10.998 7.6583C10.5033 7.94376 9.89751 7.97799 9.37374 7.74742L6.96542 6.68826C6.58309 6.51905 6.13101 6.61721 5.85136 6.93174C4.68628 8.24213 3.81634 9.74111 3.26286 11.3854C3.12853 11.7845 3.26803 12.2256 3.60838 12.4756L5.72219 14.0256C6.18332 14.364 6.45844 14.9065 6.45844 15.478C6.45844 16.0496 6.18332 16.5921 5.72349 16.9292L3.59611 18.4889C3.25705 18.7382 3.1169 19.1767 3.2493 19.5765C3.79697 21.2221 4.66303 22.723 5.82424 24.0386C6.10388 24.3544 6.55597 24.4545 6.94024 24.284L9.33563 23.2306C9.85746 23.0007 10.4645 23.0337 10.9605 23.3198C11.4553 23.6052 11.7872 24.1141 11.8499 24.6818L12.1379 27.3117C12.1838 27.7302 12.495 28.0711 12.9071 28.1558C13.7557 28.3288 14.6276 28.4167 15.5001 28.4167C16.3513 28.4167 17.2103 28.3308 18.0531 28.1616C18.4677 28.0783 18.7797 27.7373 18.8255 27.3168L19.1116 24.7038C19.1743 24.1354 19.5062 23.6265 20.0022 23.3411C20.4969 23.0563 21.1034 23.0227 21.6265 23.2519L24.0348 24.3111C24.4184 24.481 24.8692 24.3828 25.1489 24.0676C26.3139 22.7572 27.1839 21.2583 27.7374 19.614C27.8717 19.2148 27.7322 18.7737 27.3918 18.5238L25.2774 16.9738ZM15.5001 20.0208C13.0033 20.0208 10.9793 17.9968 10.9793 15.5C10.9793 13.0032 13.0033 10.9792 15.5001 10.9792C17.9969 10.9792 20.0209 13.0032 20.0209 15.5C20.0209 17.9968 17.9969 20.0208 15.5001 20.0208Z"
+                        fill="#777777" />
+                </svg>
+            </a>
+        </nav>
+    </header>
+    <main class="graph-container">
+        <aside class="box-shadow-class">
+            <h2>My charts</h2>
+            <button class="view-btn-charts">COVID 19</button>
+            <button class="view-btn-charts">Programing Languages</button>
+            <button class="view-btn-charts">GME</button>
+            <button class="view-btn-charts">IDE Ranking</button>
+            <button class="view-btn-charts">Favorite Colors</button>
+            <button class="view-btn-charts">Popular Phone</button>
+        </aside>
+        <section class="graph-container-item">
+            <canvas id="chart"></canvas>
+            <p>Source: https://pypl.github.io</p>
+        </section>
+    </main>
+    <script defer src="js/charts.js"> </script>
+</body>
+
+</html>

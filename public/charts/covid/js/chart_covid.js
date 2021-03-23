@@ -187,7 +187,6 @@ async function covidCharts(graphURL1, graphURL2) {
 
 }
 
-
-covidCharts("https://corona-api.com/timeline", "https://corona-api.com/countries")
+window.addEventListener("load", covidCharts("https://corona-api.com/timeline", "https://corona-api.com/countries"))
 
 

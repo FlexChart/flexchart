@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/userPage.css">
-    <link rel="stylesheet" href="../css/charts.css">
-    <title>Covid Chart | Flexchart</title>
+    <link rel="stylesheet" href="style.css">
+    <title>IDE Chart | Flexchart</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
         integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
         crossorigin="anonymous"></script>
@@ -30,7 +29,7 @@
             </a>
         </nav>
     </header>
-    <main class="chart-covid-container">
+    <main class="graph-container">
         <aside class="box-shadow-class">
             <h2>My charts</h2>
             <button class="view-btn-charts">COVID 19</button>
@@ -40,27 +39,12 @@
             <button class="view-btn-charts">Favorite Colors</button>
             <button class="view-btn-charts">Popular Phone</button>
         </aside>
-        <section class="covid-canvas box-shadow-class">
-            <div class="chart-box">
-                <div>
-                    <canvas id="covid"></canvas>
-                    <div style="text-align: center; padding: 15px;">
-                        <h4 id="total-confirmed"></h4>
-                        <small id="updated-at"></small>
-                    </div>
-                </div>
-                <div>
-                    <canvas id="covid2"></canvas>
-                </div>
-            </div>
-            <div id="covidByMarketContainer">
-                <select name="countries" id="countries">
-                </select>
-                <canvas class="chart-box-bymarket" id="covidByMarket"></canvas>
-            </div>
+        <section class="graph-container-item">
+            <canvas id="chart"></canvas>
+            <p>Source: https://pypl.github.io</p>
         </section>
     </main>
-    <script src="../js/chart_covid.js" />
-    </body>
+    <script defer src="js/charts.js"> </script>
+</body>
 
 </html>
