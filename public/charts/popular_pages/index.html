@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Popular websites | Flexchart</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+        integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar-background">
+            <div class="main-navbar" id="main-navbar">
+                <div id="main-title-container">
+                    <h1 id="main-title">FlexChart</h1>
+                </div>
+                <a class="nav-element projects-page" id="projects-page">Projects</a>
+                <a class="nav-element contribute-page" id="contribute-page">Contribute</a>
+                <button id="menu-button">menu</button>
+            </div>
+            <div class="menu-panel">
+                <a class="menu-panel-items">Projects</a>
+                <a class="menu-panel-items">Contribute</a>
+            </div>
+        </nav>
+    </header>
+    <main class="graph-container">
+        <aside class="box-shadow-class">
+            <h2>Pouplar</h2>
+            <button class="view-btn-charts">COVID 19</button>
+            <button class="view-btn-charts">Programing Languages</button>
+            <button class="view-btn-charts">GME</button>
+            <button class="view-btn-charts">IDE Ranking</button>
+            <button class="view-btn-charts">Data Bases</button>
+            <button class="view-btn-charts active-button">Poular Websites</button>
+        </aside>
+        <section class="graph-container-item">
+            <canvas id="chart"></canvas>
+            <p>Source: <a href="https://ahrefs.com/" target="_blank" rel="noopener noreferrer">https://ahrefs.com/</a>
+            </p>
+        </section>
+    </main>
+    <script defer src="js/charts.js"> </script>
+    <script defer src="js/navBar.js"> </script>
+</body>
+
+</html>
