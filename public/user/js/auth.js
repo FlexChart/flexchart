@@ -3,6 +3,10 @@ firebase.auth().onAuthStateChanged(user=>{
     if(user){
         console.log("signed in")
         window.displayName = user.displayName;
+        window.addEventListener("load", () => {
+            let greetTitle = document.getElementById("greet-title");
+            greetTitle.innerHTML = "Hello, " + window.displayName;
+        })
         window.email = user.email;
         window.emailVerified = user.emailVerified;
         window.photoURL = user.photoURL;

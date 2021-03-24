@@ -62,6 +62,10 @@ h1 {
 }
 /* navbar */
 
+#main-title:hover {
+  cursor:pointer;
+}
+
 .main-navbar {
   background-color: white;
   box-shadow: 0px 0.1px 0px rgba(0, 0, 0, 0.25);
@@ -107,6 +111,10 @@ h1 {
 #main-title {
   color: #6f9451;
   font-weight: 600;
+}
+
+#projects-page {
+  color: black;
 }
 
 /* main page */
@@ -228,6 +236,7 @@ h1 {
   border-top: #e6e6e6 solid 1px;
 
 }
+
 .create-new-project-title {
   display: inline-flex;
   margin-right: 40px;
@@ -237,6 +246,8 @@ h1 {
   line-height: 34px;
   color: #777777;
 }
+
+
 .new-btn {
   margin: 30px 0;
   width: 40px;
@@ -247,3 +258,4 @@ h1 {
   color: white;
   height: 40px;
 }
+

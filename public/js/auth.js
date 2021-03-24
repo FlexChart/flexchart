@@ -7,9 +7,11 @@ window.addEventListener("load", ()=>{
     })
 })
 
+let isSignedUp = false;
+
 firebase.auth().onAuthStateChanged(user=>{
     if(user){
-        console.log("signed in")
+        isSignedUp = true; 
         document.querySelector("#firebaseui-auth-container").style.display = "none"
         document.querySelector("#sign-out-button").style.display = "block"
         window.displayName = user.displayName;
