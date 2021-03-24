@@ -1,10 +1,18 @@
 window.addEventListener("load", ()=>{
+
+    let signInPopUp = document.querySelector("#sign-in-popup");
+    document.body.addEventListener("click", (e) => {
+        if (e.target.closest("#sign-in-popup") != signInPopUp && e.target != document.querySelector("#sign-up-button") && e.target != document.querySelector("#sign-up-button-menu")) {
+                signInPopUp.style.display = "none";
+    }});
+
     document.querySelector("#sign-up-button").addEventListener("click",()=>{
-        document.querySelector("#sign-in-popup").style.display = (document.querySelector("#sign-in-popup").style.display == "none") ? "flex" : "none"
+        signInPopUp.style.display = (signInPopUp.style.display == "none") ? "flex" : "none"
     })
     document.querySelector("#sign-up-button-menu").addEventListener("click",()=>{
-        document.querySelector("#sign-in-popup").style.display = (document.querySelector("#sign-in-popup").style.display == "none") ? "flex" : "none"
+        signInPopUp.style.display = (signInPopUp.style.display == "none") ? "flex" : "none"
     })
+
 })
 
 let isSignedUp = false;
