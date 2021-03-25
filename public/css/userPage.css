@@ -13,7 +13,7 @@
 body,
 html {
   background-color: #fcfcfc;
-  height:130vh;
+  height:110vh;
 }
 
 button {
@@ -76,9 +76,6 @@ h1 {
   align-items: center;
 }
 
-#setting-menu {
-  display:none;
-}
 
 .main-navbar a {
   display: block;
@@ -98,15 +95,16 @@ h1 {
   margin-bottom: 8px;
 }
 
+.main-navbar a:nth-child(4) {
+  margin-bottom: 8px;
+}
+
+
 .main-navbar a:hover {
   transition: all 0.4s;
   color: black;
 }
 
-#setting-icon:hover {
-  transition: all 0.3s;
-  fill: #4d4d4d;
-}
 
 #main-title-container {
   margin-left: 60px;
@@ -121,26 +119,6 @@ h1 {
   color: black;
 }
 
-#setting-menu {
-  width: 125px;
-  height: 50px;
-  border: 1px solid #e6e6e6;
-  background-color: white;
-  float: right;
-  position: relative;
-  top: 5px;
-  right: 5px;
-  border-radius: 8px;
-}
-
-#sign-out-button {
-  position: relative;
-  text-align: center;
-  margin-top: 8px;
-  width: 100px;
-  margin-left: 10px;
-  background-color: white;
-}
 
 /* main page */
 

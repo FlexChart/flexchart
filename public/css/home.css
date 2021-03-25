@@ -266,6 +266,11 @@ a:hover::after {
   color: var(--main-bg-color);
 }
 
+.trends-grid a:hover::after {
+  width: 0;
+  height: 0;
+}
+
 /* Steps Section */
 
 #steps-section {
