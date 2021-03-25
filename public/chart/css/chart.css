@@ -159,7 +159,9 @@ main{
     margin:0;
 }
 
-
+#add-project-btn:hover {
+    cursor: pointer;
+}
 /*chart info popup*/
 
 #chart-info-popup{
