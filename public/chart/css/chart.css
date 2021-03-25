@@ -209,6 +209,21 @@ main{
     overflow: scroll;
 }
 
+#data-table tr:nth-child(1) td{
+    background-color: rgba(0,0,0,0.02);
+    border-bottom: 1px solid var(--main-grey)
+}
+
+#data-table tr td:nth-child(1){
+    border-right: 1px solid var(--main-grey)
+}
+
+#data-table tr:nth-child(1) td:nth-child(1){
+    background-color: white;
+    color:transparent;
+    pointer-events: none;
+}
+
 #data-table td{
     border: 1px solid var(--lighter-grey);
     min-width: 40px;

@@ -15,14 +15,85 @@ function updateSidebarList(querySnapshot){
     document.querySelector("#sidebar-list").innerHTML = items.join('  ')
 }
 
+
+
+
+function* getRandomColor(){
+    let i = 0;
+    let backgroundColors = ["#89AE6B40","#FDD17A40","#EF696940"]
+    let borderColors = ["#89AE6B","#E2C17E","#CD625B"]
+    let hoverBackgroundColors = ["#89AE6B80","#FDD17A80","#EF696980"]
+    while(true){
+        yield backgroundColors[i]
+        yield borderColors[i]
+        yield hoverBackgroundColors[i]
+        i = (i>=backgroundColors.length -1) ? 0 : i+1; 
+        console.log(i)
+    }
+}
+
+var randomColor = getRandomColor();
+
+function createChart(data){
+    randomColor = getRandomColor();
+    var ctx = document.querySelector("#chart-canvas").getContext("2d")
+    var chart = new Chart(ctx,{
+        type: 'line',
+        data:formatChartData(data),
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    })
+}
+
+
+function formatChartData(data){
+    return {
+        labels:data[0].splice(1,data[0].length-1),
+        datasets:data.splice(1,data.length-1).map(datasets => {
+            return {
+                label: datasets[0],
+                data: datasets.splice(1,datasets.length-1),
+                backgroundColor:randomColor.next().value,
+                borderColor:randomColor.next().value,
+                hoverBackgroundColor:randomColor.next().value,
+                borderWidth: 1
+                
+            }
+        })
+            
+    }
+}
+
 firestore.collection("charts").doc(chartId).onSnapshot((doc)=>{
     chartName = doc.data().name
     firebaseTableData = doc.data().data ?? {};
     generateTable(doc.data().data ?? {});
+    console.log(convertDataToArray(doc.data().data ?? {}))
+    createChart(convertDataToArray(doc.data().data))
     document.querySelector("#chart-title").innerHTML = doc.data().name;
 },()=>{
     document.querySelector("#chart-title").innerHTML = "Not Found"
 })
+
+//data table object into 2d array
+function convertDataToArray(data){
+    let columns = []
+    for(let i of Object.entries(data)){
+        let rows = [];
+        for(let j of Object.entries(i[1])){
+            rows[parseInt(j[0])] = isNaN(Number(j[1])) ? j[1] : Number(j[1])    
+        }
+        columns[parseInt(i[0])] = rows
+    }
+    return columns;
+}
 
 
 //table thing
@@ -41,7 +112,6 @@ function generateTable(data){
             }
         }
     }
-    console.log(`rows:${rows}  columns:${columns}`)
     let generateRows = 
                 (i)=>{
                     let cells = "";
@@ -134,56 +204,4 @@ function editChartName(){
 
 
 //chart.js
-
-function* getRandomColor(){
-    let i = 0;
-    let backgroundColors = ["#89AE6B40","#FDD17A40","#EF696940"]
-    let borderColors = ["#89AE6B","#E2C17E","#CD625B"]
-    let hoverBackgroundColors = ["#89AE6B80","#FDD17A80","#EF696980"]
-    while(true){
-        yield backgroundColors[i]
-        yield borderColors[i]
-        yield hoverBackgroundColors[i]
-        i = (i>=backgroundColors.length) ? 0 : i+1; 
-    }
-}
-
-var randomColor = getRandomColor();
-
-window.addEventListener("load", ()=>{
-
-    var ctx = document.querySelector("#chart-canvas").getContext("2d")
-    var chart = new Chart(ctx,{
-        type: 'line',
-        data: {
-            labels: [1, 2, 3, 4, 5, 6],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor:randomColor.next().value,
-                borderColor:randomColor.next().value,
-                hoverBackgroundColor:randomColor.next().value,
-                borderWidth: 1
-            },{
-                label: '# of Votes',
-                data: [15, 12, 4, 2, 5, 2],
-                backgroundColor: randomColor.next().value,
-                borderColor:randomColor.next().value,
-                hoverBackgroundColor:randomColor.next().value,
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
-        }
-    })
-})
-
-
 
