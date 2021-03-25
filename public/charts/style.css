@@ -1,8 +1,6 @@
 @import "../../css/charts.css";
 @import "../../css/main.css";
 
-@import "main.css";
-
 /* setup */
 
 * {
@@ -56,12 +54,9 @@ h1 {
   font-size: 25px;
   line-height: 34px;
 }
-
-.line {
-  position: relative;
-  width: 100%;
-  border: 1px solid #e6e6e6;
-  bottom: 20px;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 /* navbar */
 
@@ -121,11 +116,6 @@ button {
   cursor: pointer;
 }
 
-#setting-icon:hover {
-  transition: all 0.3s;
-  fill: #4d4d4d;
-}
-
 #main-title-container {
   margin-left: 60px;
 }
@@ -141,142 +131,12 @@ button {
 
 /* main page */
 
-#user-projects-page {
-  max-width: 1050px;
-  padding: 20px;
-  overflow: hidden;
-}
-
-#main-heading {
-  margin-top: 25px;
-  margin-left: 25px;
-  display: flex;
-  flex-direction: row;
-}
-
-#greet-title {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 35px;
-  line-height: 41px;
-}
-
-#all-projects-page-btn {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 27px;
-  color: #ffffff;
-  background-color: var(--main-color);
-  padding: 15px;
-  position: relative;
-  bottom: 10px;
-  border-radius: 6px;
-}
-
 .project-box {
   margin-top: 80px;
   margin-left: 25px;
   background: #ffffff;
   border-radius: 6px;
   border: 1px solid #e6e6e6;
-}
-
-/* trend-project-box */
-
-#trending-project-box {
-  width: 98%;
-  height: 300px;
-}
-
-#trend-section-header-container {
-  display: flex;
-  flex-direction: row;
-}
-
-#trend-section-header,
-#refresh-trend-section-btn {
-  margin: 30px;
-}
-
-#refresh-trend-section-btn {
-  background: none;
-  border: none;
-}
-
-.section-header {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 27px;
-  margin-top: 3px;
-}
-
-.trend-project {
-  margin: 35px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
-
-.trend-img-title-container {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  left: 10px;
-}
-
-.project-box-title {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 27px;
-  color: #000000;
-}
-
-.project-box-title {
-  margin: 20px;
-}
-
-.view-btn {
-  position: relative;
-  width: 18%;
-  background: #89ae6b;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 27px;
-  color: white;
-  height: 60px;
-}
-
-/* Recent Project Box */
-
-/* create new project-box */
-
-.create-new-project {
-  display: flex;
-  border-top: #e6e6e6 solid 1px;
-}
-
-.create-new-project-title {
-  display: inline-flex;
-  margin-right: 40px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  line-height: 34px;
-  color: #777777;
-}
-
-.new-btn {
-  margin: 30px 0;
-  width: 40px;
-  background: #fdd17a;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 20px;
-  color: white;
-  height: 40px;
 }
 
 .graph-container {
@@ -290,7 +150,7 @@ button {
 }
 
 .graph-container-item {
-  width: 60vw;
+  width: 50vw;
 }
 
 .active-button {
@@ -298,11 +158,89 @@ button {
   color: white;
 }
 
-@media only screen and (max-width: 768px) {
+/* covid */
+
+.chart-covid-container {
+  max-width: 1200px;
+  padding: 20px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  color: var(--dark);
+}
+.box-shadow-class {
+  box-shadow: 2px 2px 15px 0px var(--lighter-grey);
+  padding: 15px 30px 15px 15px;
+  border: solid 1px var(--lighter-grey);
+  border-radius: 30px;
+}
+
+.view-btn-charts {
+  background: var(--lighter-grey);
+  width: 200px;
+  border-radius: 6px;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 10px 10px;
+  padding: 5px 40px;
+  color: var(--dark);
+  text-align: center;
+}
+
+button:hover {
+  background-color: var(--main-color);
+  color: var(--lighter-grey);
+  border: 5px solid #92b577;
+}
+
+.covid-canvas {
+  margin: 15px;
+  padding: 0 15px;
+  height: 75vh;
+}
+
+.chart-box {
+  width: 100%;
+  height: 35vh;
+  display: inline-flex;
+}
+.chart-box-bymarket {
+  max-width: 70vh;
+  max-height: 30vh;
+  display: flex;
+  padding-top: 10px;
+}
+
+.active-button {
+  background-color: var(--main-color);
+  color: white;
+}
+
+@media only screen and (max-width: 1160px) {
   #projects-page,
   #contribute-page {
     display: none;
   }
+  .covid-canvas {
+    height: auto;
+  }
+  .chart-box-bymarket {
+    display: block;
+  }
+
+  .chart-box {
+    height: auto;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .chart-covid-container {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    overflow-x: scroll;
+  }
+
   .graph-container {
     max-width: auto;
     grid-template-columns: 1fr;
