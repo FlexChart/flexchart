@@ -11,7 +11,7 @@ function randomChoice() {
         { img: "/img/covid.png", title: "COVID-19 Data", link: "/charts/covid" },
         { img: "/img/programming_languages.svg", title: "Programming Languages", link: "/charts/programming_languages" },
         { img: "/img/anime.svg", title: "Popular Anime 2021", link: "/charts/anime" },
-        { img: "/img/ide_ranking.png", title: "IDE Ranking", link: "/charts/ide" },
+        { img: "/img/ide_ranking.svg", title: "IDE Ranking", link: "/charts/ide" },
         { img: "/img/website.svg", title: "Popular Websites", link: "/charts/popular_pages" },
         { img: "/img/database.png", title: "Popular Data Bases", link: "/charts/data_bases" },
     ]
