@@ -37,7 +37,7 @@ function createChart(data,type){
     var ctx = document.querySelector("#chart-canvas").getContext("2d")
     chart?.destroy();
     chart = new Chart(ctx,{
-        type: type,
+        type: type ?? "line",
         data:formatChartData(data),
         options: {
             scales: {
