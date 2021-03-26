@@ -233,6 +233,16 @@ main{
     margin: 0;
 }
 
+#load-example-data{
+    padding: 5px;
+    border:1px solid var(--lighter-grey);
+    background-color:white;
+    border-radius: 5px;
+    margin: 0;
+    margin-bottom: 4px;
+    color:black;
+}
+
 select {
     appearance: none;
     -moz-appearance: none;

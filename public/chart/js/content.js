@@ -93,7 +93,6 @@ firestore.collection("charts").doc(chartId).onSnapshot((doc)=>{
     createChart(convertDataToArray(doc.data().data),["line","bar","pie","radar"][parseInt(doc.data().chartType ?? "0")-1])
     document.querySelector("#chart-type-selection").value = doc.data().chartType ?? 0;
 },()=>{
-    document.querySelector("#chart-title").innerHTML = "Not Found"
 })
 
 function updateChartType(type){
@@ -102,6 +101,11 @@ function updateChartType(type){
     })
 }
 
+function loadExampleData(){
+        firestore.collection("charts").doc(chartId).update({
+            data:{"0":{"1":" 1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7"},"1":{"0":"graph 1 ","1":"1","2":"2","3":"1","4":"5","5":"3","6":"5","7":"6"},"2":{"0":"graph 2","1":"1","2":"5","3":"2","4":"4","5":"5","6":"3","7":"3"},"3":{"0":"graph 3","1":"4","2":"1","3":"3","4":"1","5":"6","6":"2","7":"3"},"4":{"0":"graph 4\n","1":"4","2":"3","3":"4","4":"2","5":"3","6":"1","7":"3"}}
+        })
+}
 
 
 //table thing
@@ -138,7 +142,7 @@ function generateTable(data){
         }
         return `<table id="data-table">${tableString}</table>`
     }
-    document.querySelector("#table-container").innerHTML = table();
+    document.querySelector("#table-container").innerHTML = "<button id='load-example-data' onclick='loadExampleData()'>load example data</button>" + table();
     document.querySelector(`#${previousFocusId}`)?.focus();
 }
 
