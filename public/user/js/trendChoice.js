@@ -3,7 +3,7 @@ let trendProjectTitle = document.getElementById("trend-project-title");
 let refreshTrendBtn = document.getElementById("refresh-trend-section-btn");
 let trendImg = document.getElementById("trend-img");
 let originLink = window.location.origin + "//charts//";
-let relativeImgLocation = "../img/"
+let relativeImgLocation = "//public//img//"
 
 let trendlinks = [
     originLink + "covid",
@@ -25,7 +25,13 @@ let trendTitle = [
 
 let imgLocation = [
     relativeImgLocation + "covid.png",
+    relativeImgLocation + "programming_languages.svg",
+    relativeImgLocation + "ide_ranking.png",
+    relativeImgLocation + "databases.png",
+    relativeImgLocation + "anime.svg",
+    relativeImgLocation + "website.svg"
 ]
+
 
 function randomChoice() {
 
