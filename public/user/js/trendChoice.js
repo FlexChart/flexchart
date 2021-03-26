@@ -1,11 +1,23 @@
 let refreshTrendBtn = document.getElementById("refresh-trend-section-btn");
+var currentTrendNum = 1e88;
+
 
 function randomChoice() {
 
-    let viewTrendProjectBtn = document.getElementById("view-trend-project-link");
+    let viewTrendProjectBtn = document.getElementById("view-trend-project");
     let trendProjectTitle = document.getElementById("trend-project-title");
     let trendImg = document.getElementById("trend-img");
     var randomNumber = Math.floor(Math.random() * 5)
+    if(currentTrendNum == randomNumber) {
+        try{
+            randomNumber--;
+        } catch {
+            randomNumber++;
+        
+        }
+    }
+        
+    currentTrendNum = randomNumber;
 
     const trending = [
         { img: "/img/covid.png", title: "COVID-19 Data", link: "/charts/covid" },
@@ -20,8 +32,11 @@ function randomChoice() {
     trendImg.setAttribute("src", trending[randomNumber].img)
     trendImg.setAttribute("alt", trending[randomNumber].title)
     trendProjectTitle.innerHTML = trending[randomNumber].title
-    viewTrendProjectBtn.setAttribute("href", trending[randomNumber].link);
-}
+    viewTrendProjectBtn.addEventListener("click", () => {
+        window.location.href = trending[randomNumber].link;
+    })
+    }
+
 
 randomChoice()
 

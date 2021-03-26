@@ -24,3 +24,4 @@ contributePageButton.addEventListener("click", () => {
 mainTitle.addEventListener("click", () => {
     window.location.href = window.location.origin;
 })
+

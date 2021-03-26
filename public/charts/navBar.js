@@ -1,7 +1,18 @@
 let menuButton = document.getElementById("menu-button");
 let navbarSize = document.getElementById("main-navbar");
 let menuPanel = document.querySelector(".menu-panel");
+let contributePageBtn = document.getElementById("contribute-page");
+let mainTitle = document.getElementById("main-title");
 let menuIsOpened = false;
+
+contributePageBtn.addEventListener("click", () => {
+    window.open("https://github.com/FlexChart/flexchart", "_blank");
+});
+
+
+mainTitle.addEventListener("click", () => {
+    window.location.href = window.location.origin + "//user";
+})
 
 
 window.onload = showMenuPanel;
