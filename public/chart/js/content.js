@@ -28,17 +28,16 @@ function* getRandomColor(){
         yield borderColors[i]
         yield hoverBackgroundColors[i]
         i = (i>=backgroundColors.length -1) ? 0 : i+1; 
-        console.log(i)
     }
 }
-
 var randomColor = getRandomColor();
-
-function createChart(data){
+var chart;
+function createChart(data,type){
     randomColor = getRandomColor();
     var ctx = document.querySelector("#chart-canvas").getContext("2d")
-    var chart = new Chart(ctx,{
-        type: 'line',
+    chart?.destroy();
+    chart = new Chart(ctx,{
+        type: type,
         data:formatChartData(data),
         options: {
             scales: {
@@ -47,11 +46,27 @@ function createChart(data){
                         beginAtZero: true
                     }
                 }]
+            },
+            animation:{
+                duration:0
             }
         }
-    })
+    })    
 }
 
+
+//data table object into 2d array
+function convertDataToArray(data){
+    let columns = []
+    for(let i of Object.entries(data)){
+        let rows = [];
+        for(let j of Object.entries(i[1])){
+            rows[parseInt(j[0])] = isNaN(Number(j[1])) ? j[1] : Number(j[1])    
+        }
+        columns[parseInt(i[0])] = rows
+    }
+    return columns;
+}
 
 function formatChartData(data){
     return {
@@ -75,25 +90,18 @@ firestore.collection("charts").doc(chartId).onSnapshot((doc)=>{
     chartName = doc.data().name
     firebaseTableData = doc.data().data ?? {};
     generateTable(doc.data().data ?? {});
-    console.log(convertDataToArray(doc.data().data ?? {}))
-    createChart(convertDataToArray(doc.data().data))
-    document.querySelector("#chart-title").innerHTML = doc.data().name;
+    createChart(convertDataToArray(doc.data().data),["line","bar","pie","radar"][parseInt(doc.data().chartType ?? "0")-1])
+    document.querySelector("#chart-type-selection").value = doc.data().chartType ?? 0;
 },()=>{
     document.querySelector("#chart-title").innerHTML = "Not Found"
 })
 
-//data table object into 2d array
-function convertDataToArray(data){
-    let columns = []
-    for(let i of Object.entries(data)){
-        let rows = [];
-        for(let j of Object.entries(i[1])){
-            rows[parseInt(j[0])] = isNaN(Number(j[1])) ? j[1] : Number(j[1])    
-        }
-        columns[parseInt(i[0])] = rows
-    }
-    return columns;
+function updateChartType(type){
+    firestore.collection("charts").doc(chartId).update({
+        chartType:type
+    })
 }
+
 
 
 //table thing

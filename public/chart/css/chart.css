@@ -233,4 +233,16 @@ main{
     margin: 0;
 }
 
+select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid var(--lighter-grey);
+    background-color: white;
+    font-size: 14px;
+    padding: 5px;
+}
 
+label{
+    font-size: 14px;
+}

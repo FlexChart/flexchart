@@ -66,10 +66,16 @@
                 </canvas>
             </div>
             <div id="table-container" class="section-container">
-                table
             </div>
             <div id="adjustments-container" class="section-container">
-                adjustments
+                <h3>Adjustments</h3> 
+                <label for="chart-type-selection">type:</label>
+                <select name="chart-type" id="chart-type-selection" onchange="updateChartType(this.value)">
+                    <option value="1">line</option>
+                    <option value="2">bar</option>
+                    <option value="3">pie</option>
+                    <option value="4">radar</option>
+                </select>
             </div>
         </div>
     </main>
