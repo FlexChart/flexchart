@@ -13,7 +13,7 @@
 body,
 html {
   background-color: #fcfcfc;
-  height:110vh;
+  height: 110vh;
 }
 
 button {
@@ -33,6 +33,11 @@ button {
 
 .flex-spacer {
   flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 button:hover {
@@ -63,7 +68,7 @@ h1 {
 /* navbar */
 
 #main-title:hover {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .main-navbar {
@@ -75,7 +80,6 @@ h1 {
   flex-direction: row;
   align-items: center;
 }
-
 
 .main-navbar a {
   display: block;
@@ -99,12 +103,10 @@ h1 {
   margin-bottom: 8px;
 }
 
-
 .main-navbar a:hover {
   transition: all 0.4s;
   color: black;
 }
-
 
 #main-title-container {
   margin-left: 60px;
@@ -118,7 +120,6 @@ h1 {
 #projects-page {
   color: black;
 }
-
 
 /* main page */
 
@@ -237,7 +238,6 @@ h1 {
 .create-new-project {
   display: flex;
   border-top: #e6e6e6 solid 1px;
-
 }
 
 .create-new-project-title {
@@ -250,7 +250,6 @@ h1 {
   color: #777777;
 }
 
-
 .new-btn {
   margin: 30px 0;
   width: 40px;
@@ -261,4 +260,3 @@ h1 {
   color: white;
   height: 40px;
 }
-

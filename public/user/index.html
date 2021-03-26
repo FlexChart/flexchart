@@ -34,6 +34,7 @@
     <script src="js/auth.js"> </script>
     <script src="js/content.js"> </script>
     <script src="js/nav.js" defer></script>
+    <script src="js/trendChoice.js" defer></script>
 </head>
 
 <body>
@@ -71,11 +72,11 @@
             <div class="line"></div>
             <div class="trend-project">
                 <div class="trend-img-title-container">
-                    <img id="trend-img" src="../img/covid.png" alt="">
-                    <h3 id="trend-project-title" class="project-box-title">COVID-19 Data</h3>
+                    <img id="trend-img">
+                    <h3 id="trend-project-title" class="project-box-title"></h3>
                 </div>
                 <div class="flex-spacer"></div>
-                <button id="view-trend-project" class="view-btn">view</button>
+                <button id="view-trend-project" class="view-btn"><a id="view-trend-project-link">view</a></button>
             </div>
         </div>
 
@@ -95,12 +96,12 @@
             <div class="line"></div>
             <div id="project-container">
             </div>
-                <div class="create-new-project">
-                    <div>
-                        <h3 class="create-new-project-title">Create New Project</h3>
-                        <button class="new-btn">+</button>
-                    </div>
+            <div class="create-new-project">
+                <div>
+                    <h3 class="create-new-project-title">Create New Project</h3>
+                    <button class="new-btn">+</button>
                 </div>
+            </div>
     </main>
 </body>
 

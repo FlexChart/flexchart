@@ -1,41 +1,30 @@
-let viewTrendProjectBtn = document.getElementById("view-trend-project");
-let trendProjectTitle = document.getElementById("trend-project-title");
 let refreshTrendBtn = document.getElementById("refresh-trend-section-btn");
-let trendImg = document.getElementById("trend-img");
-let originLink = window.location.origin + "//charts//";
-let relativeImgLocation = "//public//img//"
-
-let trendlinks = [
-    originLink + "covid",
-    originLink + "programming_languages",
-    originLink + "ide",
-    originLink + "data_bases",
-    originLink + "anime",
-    originLink + "popular_pages"
-]
-
-let trendTitle = [
-    "COVID-19 Data",
-    "Programming Languages",
-    "IDE Ranking",
-    "Popular Data Bases",
-    "Popular Anime 2021",
-    "Popular Websites"
-]
-
-let imgLocation = [
-    relativeImgLocation + "covid.png",
-    relativeImgLocation + "programming_languages.svg",
-    relativeImgLocation + "ide_ranking.png",
-    relativeImgLocation + "databases.png",
-    relativeImgLocation + "anime.svg",
-    relativeImgLocation + "website.svg"
-]
-
 
 function randomChoice() {
 
+    let viewTrendProjectBtn = document.getElementById("view-trend-project-link");
+    let trendProjectTitle = document.getElementById("trend-project-title");
+    let trendImg = document.getElementById("trend-img");
+    var randomNumber = Math.floor(Math.random() * 5)
+
+    const trending = [
+        { img: "/img/covid.png", title: "COVID-19 Data", link: "/charts/covid" },
+        { img: "/img/programming_languages.svg", title: "Programming Languages", link: "/charts/programming_languages" },
+        { img: "/img/anime.svg", title: "Popular Anime 2021", link: "/charts/anime" },
+        { img: "/img/ide_ranking.png", title: "IDE Ranking", link: "/charts/ide" },
+        { img: "/img/website.svg", title: "Popular Websites", link: "/charts/popular_pages" },
+        { img: "/img/database.png", title: "Popular Data Bases", link: "/charts/data_bases" },
+    ]
+
+
+    trendImg.setAttribute("src", trending[randomNumber].img)
+    trendImg.setAttribute("alt", trending[randomNumber].title)
+    trendProjectTitle.innerHTML = trending[randomNumber].title
+    viewTrendProjectBtn.setAttribute("href", trending[randomNumber].link);
 }
 
+randomChoice()
 
 
+
+refreshTrendBtn.addEventListener("click", randomChoice)
