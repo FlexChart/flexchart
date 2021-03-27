@@ -14,7 +14,7 @@
 body,
 html {
   background-color: #fcfcfc;
-  height: 130vh;
+  height: 85vh;
 }
 
 button {
@@ -144,13 +144,16 @@ button {
   padding: 20px;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
   color: var(--dark);
   margin: auto;
+  height: 100%;
+  align-items: center;
 }
 
 .graph-container-item {
-  width: 50vw;
+  width: 90%;
 }
 
 .active-button {
@@ -167,6 +170,7 @@ button {
   display: grid;
   grid-template-columns: 1fr 5fr;
   color: var(--dark);
+  grid-row-gap: 20px;
 }
 .box-shadow-class {
   box-shadow: 2px 2px 15px 0px var(--lighter-grey);
@@ -194,16 +198,18 @@ button:hover {
 }
 
 .covid-canvas {
-  margin: 15px;
+  margin: 5px;
   padding: 0 15px;
   height: 75vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
 }
 
-.chart-box {
-  width: 100%;
-  height: 35vh;
-  display: inline-flex;
+#covidByMarketContainer {
+  grid-column: span 2;
 }
+
 .chart-box-bymarket {
   max-width: 70vh;
   max-height: 30vh;
@@ -221,11 +227,23 @@ button:hover {
   #contribute-page {
     display: none;
   }
+
+  .border-charts {
+    border-bottom: var(--main-color) solid 1px;
+  }
+
   .covid-canvas {
+    padding: 20px;
+    grid-template-columns: 1fr;
     height: auto;
   }
-  .chart-box-bymarket {
-    display: block;
+  .covid-canvas:nth-child(1) {
+    border-bottom: solid red 1px;
+  }
+
+  #covidByMarketContainer {
+    margin-top: 30px;
+    grid-column: 1;
   }
 
   .chart-box {
@@ -245,6 +263,7 @@ button:hover {
     max-width: auto;
     grid-template-columns: 1fr;
     overflow-x: auto;
+    height: auto;
   }
   .graph-container-item {
     width: 400px;

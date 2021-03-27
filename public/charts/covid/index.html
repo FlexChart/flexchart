@@ -44,27 +44,25 @@
             <a href="/charts/popular_pages"><button class="view-btn-charts">Websites</button></a>
         </aside>
         <section class="covid-canvas box-shadow-class">
-            <div class="chart-box">
-                <div>
-                    <canvas id="covid"></canvas>
-                    <div style="text-align: center; padding: 15px;">
-                        <h4 id="total-confirmed"></h4>
-                        <small id="updated-at"></small>
-                    </div>
-                </div>
-                <div>
-                    <canvas id="covid2"></canvas>
+            <div class="border-charts">
+                <canvas id="covid"></canvas>
+                <div style="text-align: center; padding: 15px;">
+                    <h4 id="total-confirmed"></h4>
+                    <small id="updated-at"></small>
                 </div>
             </div>
-            <div id="covidByMarketContainer">
+            <div class="border-charts">
+                <canvas id="covid2"></canvas>
+            </div>
+            <div id="covidByMarketContainer" class="border-charts">
                 <select name="countries" id="countries">
                 </select>
                 <canvas class="chart-box-bymarket" id="covidByMarket"></canvas>
             </div>
-            <small>Source:
-                <a href="https://corona-api.com/" target="_blank" rel="noopener noreferrer">https://corona-api.com/</a>
-            </small>
         </section>
+        <small>Source:
+            <a href="https://corona-api.com/" target="_blank" rel="noopener noreferrer">https://corona-api.com/</a>
+        </small>
     </main>
     <script defer src="js/chart_covid.js"> </script>
     <script defer src="../navBar.js"> </script>
