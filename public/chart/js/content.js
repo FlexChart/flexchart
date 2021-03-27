@@ -57,31 +57,37 @@ function createChart(data,type){
 
 //data table object into 2d array
 function convertDataToArray(data){
-    let columns = []
+    let columnsNum = 0;
     for(let i of Object.entries(data)){
-        let rows = [];
+        if(parseInt(i[0])+1>columnsNum){
+            columnsNum = parseInt(i[0])+1
+        }
+    }
+    let columns = Array(columnsNum).fill(undefined)
+    for(let i of Object.entries(data)){
+        let rows = [] 
         for(let j of Object.entries(i[1])){
             rows[parseInt(j[0])] = isNaN(Number(j[1])) ? j[1] : Number(j[1])    
         }
         columns[parseInt(i[0])] = rows
     }
+    console.log(columns)
     return columns;
 }
 
 function formatChartData(data){
     return {
-        labels:data[0].splice(1,data[0].length-1),
-        datasets:data.splice(1,data.length-1).map(datasets => {
+        labels:data[0]?.splice(1,data[0].length-1),
+        datasets:data?.splice(1,data.length-1)?.map(datasets => {
             return {
-                label: datasets[0],
-                data: datasets.splice(1,datasets.length-1),
+                label: datasets?.[0] ?? "undefined",
+                data: datasets?.splice(1,datasets?.length-1) ?? [0],
                 backgroundColor:randomColor.next().value,
                 borderColor:randomColor.next().value,
                 hoverBackgroundColor:randomColor.next().value,
                 borderWidth: 1
-                
             }
-        })
+        }) ?? [{label:"undefined",data:[0]}]
             
     }
 }
@@ -102,11 +108,20 @@ function updateChartType(type){
 }
 
 function loadExampleData(){
+    if(confirm("load example data? this will erase any data already entered")){
         firestore.collection("charts").doc(chartId).update({
             data:{"0":{"1":" 1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7"},"1":{"0":"graph 1 ","1":"1","2":"2","3":"1","4":"5","5":"3","6":"5","7":"6"},"2":{"0":"graph 2","1":"1","2":"5","3":"2","4":"4","5":"5","6":"3","7":"3"},"3":{"0":"graph 3","1":"4","2":"1","3":"3","4":"1","5":"6","6":"2","7":"3"},"4":{"0":"graph 4\n","1":"4","2":"3","3":"4","4":"2","5":"3","6":"1","7":"3"}}
         })
+    }
 }
 
+function clearAllData(){
+    if(confirm("Clear all data?")){
+        firestore.collection("charts").doc(chartId).update({
+            data:{}
+        })
+    }
+}
 
 //table thing
 var previousFocusId;
@@ -135,14 +150,14 @@ function generateTable(data){
 
     let table = ()=>{
         let tableString = ""
-        for(let i = 0; i<rows+4; i++){
+        for(let i = 0; i<Math.max(rows+2,5); i++){
             tableString += `<tr>${
                 generateRows(i)
             }</tr>`
         }
         return `<table id="data-table">${tableString}</table>`
     }
-    document.querySelector("#table-container").innerHTML = "<button id='load-example-data' onclick='loadExampleData()'>load example data</button>" + table();
+    document.querySelector("#table-container").innerHTML = "<button id='load-example-data' onclick='loadExampleData()'>load example data</button> <button id='clear-all-data' onclick='clearAllData()'>clear all data</button> " + table();
     document.querySelector(`#${previousFocusId}`)?.focus();
 }
 
