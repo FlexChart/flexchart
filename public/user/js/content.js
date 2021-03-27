@@ -26,4 +26,5 @@ function updateProjectsList(querySnapshot){
             `)
     })
     document.querySelector("#project-container").innerHTML = items.join('  ')
+    
 }
