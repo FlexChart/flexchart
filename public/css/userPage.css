@@ -135,6 +135,23 @@ h1 {
   color: black;
 }
 
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--main-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: #c4c4c4;
+}
+
+
 /* main page */
 
 #user-projects-page {
