@@ -1,4 +1,5 @@
 let firestore = firebase.firestore();
+var chartNames;
 
 window.addEventListener("load", () => {
     document.querySelector(".new-btn").addEventListener("click", () => {
@@ -26,5 +27,5 @@ function updateProjectsList(querySnapshot){
             `)
     })
     document.querySelector("#project-container").innerHTML = items.join('  ')
-    
+    chartNames = querySnapshot.docs.map(chart=>chart.data().name)
 }
