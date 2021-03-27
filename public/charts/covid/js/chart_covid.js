@@ -169,11 +169,18 @@ async function covidCharts(graphURL1, graphURL2) {
                         'rgba(255, 99, 132, 1)',
                         'rgba(100, 50, 200, 1)',
                     ],
-                    label: "Numbers in Thousands",
                     borderWidth: 1
                 }]
             },
             options: {
+                title: {
+                    display: true,
+                    text: "latest Update by market. Numbers in Thousands "
+                },
+                legend: {
+                    display: false,
+                    position: "left",
+                },
                 scales: {
                     xAxes: [{
                         gridLines: {
