@@ -31,9 +31,9 @@ let deleteData = function (){
     let deleteButtonId = this.id;
     let deleteButton = document.getElementById(deleteButtonId)
 
-    deleteButton.addEventListener("click", () => {
-        darkShadow2.style.display = "block";
-    })
+    // deleteButton.addEventListener("click", () => {
+    darkShadow2.style.display = "block";
+    // })
 
     let confirmDeleteButton = document.getElementById("delete-button");
     let confirmCancelButton = document.getElementById("cancel-button");
@@ -75,10 +75,13 @@ function updateProjectsList(querySnapshot){
             `)
     })
     document.querySelector("#project-container").innerHTML = items.join('  ')
+
+    chartDatas = {};
     chartNames = querySnapshot.docs.map(chart=>chart.data().name)
     chartIds = querySnapshot.docs.map(chart=>chart.id)
 
     let projectsSettingsContainers = document.getElementById("projects-settings-containers");
+    projectsSettingsContainers.innerHTML = "";
 
     let counter = 0
     for(let chartName of chartNames) {

@@ -78,10 +78,8 @@ h1 {
 }
 
 .line {
-  position: relative;
   width: 100%;
   border: 1px solid #e6e6e6;
-  bottom: 20px;
 }
 /* navbar */
 
@@ -209,12 +207,15 @@ h1 {
 #trend-section-header-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  padding: 0px 10px
 }
 
 #trend-section-header,
 #refresh-trend-section-btn {
-  margin: 30px;
+  margin: 20px;
 }
+
 
 #refresh-trend-section-btn {
   background: none;

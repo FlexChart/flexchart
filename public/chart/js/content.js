@@ -58,6 +58,9 @@ function createChart(data,type){
 //data table object into 2d array
 function convertDataToArray(data){
     let columnsNum = 0;
+    if(!data){
+        data={0:{0:""}}
+    }
     for(let i of Object.entries(data)){
         if(parseInt(i[0])+1>columnsNum){
             columnsNum = parseInt(i[0])+1
@@ -71,7 +74,6 @@ function convertDataToArray(data){
         }
         columns[parseInt(i[0])] = rows
     }
-    console.log(columns)
     return columns;
 }
 
