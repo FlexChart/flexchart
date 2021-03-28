@@ -1,4 +1,4 @@
-window.addEventListener("load", ()=>{
+window.addEventListener("load", () => {
 
     let signInPopUp = document.querySelector("#sign-in-popup");
     document.body.addEventListener("click", (e) => {
@@ -7,15 +7,15 @@ window.addEventListener("load", ()=>{
             e.target != document.querySelector("#sign-up-button-menu") &&
             e.target.tagName != "BUTTON" &&
             e.target.tagName != "A"
-            ) {
-                signInPopUp.style.display = "none";
-    }
-});
+        ) {
+            signInPopUp.style.display = "none";
+        }
+    });
 
-    document.querySelector("#sign-up-button").addEventListener("click",()=>{
+    document.querySelector("#sign-up-button").addEventListener("click", () => {
         signInPopUp.style.display = (signInPopUp.style.display == "none") ? "flex" : "none"
     })
-    document.querySelector("#sign-up-button-menu").addEventListener("click",()=>{
+    document.querySelector("#sign-up-button-menu").addEventListener("click", () => {
         signInPopUp.style.display = (signInPopUp.style.display == "none") ? "flex" : "none"
     })
 
@@ -23,9 +23,9 @@ window.addEventListener("load", ()=>{
 
 let isSignedUp = false;
 
-firebase.auth().onAuthStateChanged(user=>{
-    if(user){
-        isSignedUp = true; 
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        isSignedUp = true;
         document.querySelector("#firebaseui-auth-container").style.display = "none"
         document.querySelector("#sign-out-button").style.display = "block"
         window.displayName = user.displayName;
@@ -38,7 +38,9 @@ firebase.auth().onAuthStateChanged(user=>{
         document.querySelector("#menu-button").innerHTML = displayName
         document.querySelector("#sign-up-button").innerHTML = displayName
         document.querySelector("#sign-up-button-menu").innerHTML = displayName
-    }else{
+        document.querySelector("#login-page").style.display = "none"
+        document.querySelector("#login-page-menu").style.display = "none"
+    } else {
         document.querySelector("#firebaseui-auth-container").style.display = "block"
         document.querySelector("#sign-out-button").style.display = "none"
         document.querySelector("#menu-button").innerHTML = "menu"
@@ -46,4 +48,3 @@ firebase.auth().onAuthStateChanged(user=>{
         document.querySelector("#sign-up-button-menu").innerHTML = "sign up"
     }
 })
-
