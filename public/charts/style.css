@@ -17,6 +17,7 @@ html {
     height: 100%;
 }
 
+
 button {
   appearance: none;
   -moz-appearance: none;
@@ -158,8 +159,8 @@ button {
 
 .graph-container {
   position: absolute;
-  top:0;
-  width: 100%;
+  top:85px;
+  height: calc(100% - 170px);
   padding: 20px 200px;
   overflow: hidden;
   display: grid;
@@ -167,7 +168,7 @@ button {
   grid-template-rows: 1fr;
   color: var(--dark);
   margin: auto;
-  height: 100%;
+  width: 100%;
   align-items: center;
 }
 
