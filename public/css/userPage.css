@@ -380,6 +380,13 @@ h1 {
 }
 
 
+#no-project-message {
+  color: #a6a6a6;
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+}
+
 /* confirm pop up */
 
 #confirm-delete-pop-up {
@@ -415,4 +422,57 @@ h1 {
 #cancel-button {
   background-color: white;
   border: 1px solid #E6E6E6;
+}
+
+
+/* edit name pop up */
+
+#dark-shadow-3 {
+  display: none;
+}
+
+
+#edit-name-pop-up {
+
+  width: 250px;
+  height: 170px;
+  background-color: white;
+  box-shadow: 0px 4px 130px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+
+#edit-name-container {
+
+  text-align: center;
+  position: relative;
+  top:50%;
+  transform:translate(0, -50%);
+}
+
+#edit-name-container input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #f2f2f2;
+  outline-color: #b3e0ff;
+}
+
+
+#confirm-name-button {
+  margin-right: 10px;
+  background-color: #33adff;
+  color: white;
+}
+
+#cancel-name-button {
+  background-color: white;
+  border: 1px solid #E6E6E6;
+
 }

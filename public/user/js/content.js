@@ -1,6 +1,8 @@
 let firestore = firebase.firestore();
 var chartNames;
 var chartDatas = {};
+var chartNamesDatas = {}
+
 
 window.addEventListener("load", () => {
     document.querySelector(".new-btn").addEventListener("click", () => {
@@ -50,6 +52,47 @@ let deleteData = function (){
 
 }
 
+
+let editDataName = function () {
+    let dataId = this.id;
+    let darkShadow3 = document.getElementById("dark-shadow-3");
+    darkShadow3.style.display = "block";
+
+    let confirmNameCancelButton = document.getElementById("cancel-name-button")
+    let confirmNameButton = document.getElementById("confirm-name-button")
+    let nameInput = document.getElementById("new-project-name-input");
+
+    confirmNameCancelButton.addEventListener("click", () => {
+        darkShadow3.style.display = "none";
+    })
+
+    confirmNameButton.addEventListener("click", () => {
+        let nameInputValue = nameInput.value;
+        if(nameInputValue.trim()) {
+            firestore.collection("charts").doc(chartNamesDatas[dataId]).update({
+                name: nameInputValue
+            })
+            darkShadow3.style.display = "none";
+        }  
+        
+    })
+}
+
+
+window.addEventListener("load", () => {
+
+    let darkShadow3 = document.getElementById("dark-shadow-3");
+    document.body.addEventListener("click", (e) => {
+        if(e.target == darkShadow3 || 
+           e.target == document.getElementById("dark-shadow-1") ||
+           e.target == document.getElementById("dark-shadow-2"))
+           {
+                darkShadow3.style.display = "none";
+           }
+    })
+})
+
+
 window.addEventListener("load", () => {
 
     let darkShadow2 = document.getElementById("dark-shadow-2");
@@ -94,6 +137,7 @@ function updateProjectsList(querySnapshot){
         let chartNameButton = document.createElement("button");
         chartNameButton.classList.add("chart-name-button");
         chartNameButton.innerHTML = chartName;
+        chartNameButton.id = chartName;
         chartNamesContainer.appendChild(chartNameButton);
 
         // create delete button and append to div
@@ -109,15 +153,25 @@ function updateProjectsList(querySnapshot){
 
         // append them to chartDatas
         chartDatas[deleteButton.id] = chartIds[counter];
+        chartNamesDatas[chartName] = chartIds[counter];
         counter++;
 
 
     }
-
+    if (chartNames.length == 0) {
+        noProjectsMessage = document.createElement("p");
+        noProjectsMessage.innerHTML = "No Projects Yet..";
+        noProjectsMessage.id = "no-project-message";
+        projectsSettingsContainers.appendChild(noProjectsMessage);
+    } 
     // detect Button clicked
     let chartDatasArray = Object.keys(chartDatas);
 
     for (let chartData of chartDatasArray) {
         document.getElementById(chartData).onclick = deleteData;
+    }
+
+    for (let eachChart of chartNames) {
+        document.getElementById(eachChart).onclick = editDataName;
     }
 }
