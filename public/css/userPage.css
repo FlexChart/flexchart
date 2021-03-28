@@ -31,11 +31,15 @@ button {
   outline: none;
 }
 
-#dark-shadow {
+#dark-shadow-1 {
   display:none;
 }
 
-#dark-shadow {
+#dark-shadow-2 {
+  display: none;
+}
+
+.dark-shadow {
   position: fixed;
   top:0;
   left: 0;
@@ -310,6 +314,8 @@ h1 {
   border-radius: 10px;
   box-shadow: 0px 4px 97px rgba(0, 0, 0, 0.25);
 
+  overflow-y:auto;
+
 }
 
 #project-setting-pop-up .pop-up-title {
@@ -344,4 +350,68 @@ h1 {
   font-weight: 400;
   font-size: 20px;
   line-height: 27px;
+}
+
+.chart-name-button {
+  margin: 15px;
+  margin-left: 40px;
+  padding: 10px;
+
+  background: #FFFFFF;
+  border: 1px solid #EBEBEB;
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.delete-button {
+  margin-top: 10px;
+  float: right;
+  margin-right: 20px;
+}
+
+.delete-button:hover {
+  cursor: pointer;
+}
+
+
+/* confirm pop up */
+
+#confirm-delete-pop-up {
+  width: 250px;
+  height: 170px;
+  background-color: white;
+  box-shadow: 0px 4px 130px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#confirm-delete-container {
+  text-align: center;
+  position: relative;
+  top:50%;
+  transform:translate(0, -50%);
+}
+
+#confirm-message {
+  position: relative;
+  bottom: 15px;
+}
+
+#delete-button {
+  background-color:#FF6666;
+  color: white;
+}
+
+#cancel-button {
+  background-color: white;
+  border: 1px solid #E6E6E6;
 }

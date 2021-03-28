@@ -1,6 +1,7 @@
 let projectSettingPopUp = document.getElementById("project-setting-pop-up");
 let settingBtn = document.getElementById("setting-btn");
-let darkShadow = document.getElementById("dark-shadow");
+let darkShadow = document.getElementById("dark-shadow-1");
+
 
 settingBtn.addEventListener("click", () => {
     projectSettingPopUp.style.display = "block";
