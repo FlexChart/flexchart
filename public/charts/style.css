@@ -144,6 +144,11 @@ button {
 }
 
 #projects-page {
+    
+}
+
+
+#projects-page:hover {
   color: black;
 }
 

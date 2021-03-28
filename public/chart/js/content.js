@@ -234,3 +234,6 @@ function editChartName(){
 
 //chart.js
 
+function redirectUserPage() {
+    window.location.href = window.location.origin + "//user"
+}
