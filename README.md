@@ -5,16 +5,17 @@
 <div align="center">
   <img src="https://flexchart-web.web.app/img/icon.png" width="340" height="340" alt="Flexchart">
   <br>
+  <br>
+  <br>
   <img src="https://flexchart-web.web.app/img/underline.png" alt="">
   <br>
-
-
+  <br>
+</div>
 
 
 
 Flexchart is a project that brings some statistics about COVID, popular Programming languages among others. It also allows you to create your own charts. Website: https://flexchart-web.web.app/
 
-</div>
 
 
 
