@@ -20,12 +20,12 @@ Flexchart is a project that brings some statistics about COVID, popular Programm
 
 # Visit our trending charts
 
-1. [COVID](https://flexchart-web.web.app/charts/covid)
-1. [March: Programming Languages](https://flexchart-web.web.app/charts/programming_languages/)
-1. [20201: Popular Anime](https://flexchart-web.web.app/charts/anime)
-1. [March: IDE Ranking](https://flexchart-web.web.app/charts/ide)
-1. [2021: Worlwide Popular Websites](https://flexchart-web.web.app/charts/popular_pages)
-1. [March: Data Bases](https://flexchart-web.web.app/charts/data_bases)
+- [x] [COVID](https://flexchart-web.web.app/charts/covid)
+- [x] [March: Programming Languages](https://flexchart-web.web.app/charts/programming_languages/)
+- [x] [20201: Popular Anime](https://flexchart-web.web.app/charts/anime)
+- [x] [March: IDE Ranking](https://flexchart-web.web.app/charts/ide)
+- [x] [2021: Worlwide Popular Websites](https://flexchart-web.web.app/charts/popular_pages)
+- [x] [March: Data Bases](https://flexchart-web.web.app/charts/data_bases)
 
 # Create your Own Chart
 
