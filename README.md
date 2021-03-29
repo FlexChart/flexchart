@@ -14,7 +14,6 @@
 Flexchart is a project that brings some statistics about COVID, popular Programming languages among others. It also allows you to create your own charts. Website: https://flexchart-web.web.app/
 
 </div>
-# No Installation Required
 
 Visit our live website [here](https://flexchart-web.web.app/) or copy & paste the link https://flexchart-web.web.app/
 
