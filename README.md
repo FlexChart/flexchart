@@ -14,11 +14,11 @@
 
 
 
-[Flexchart](https://flexchart-web.web.app) is a project that brings some statistics about COVID, popular Programming languages among others. It also allows you to create your own charts. Website: https://flexchart-web.web.app/
+[Flexchart](https://flexchart-web.web.app) is a modern data graphing tool. It brings statistics about COVID, Popular Programming languages and many others. It also allows you to create your own charts as well. Website: https://flexchart-web.web.app/
 
 
 
-## Visit our trending charts
+## Trending Charts
 
 - [x] [COVID](https://flexchart-web.web.app/charts/covid)
 - [x] [March: Programming Languages](https://flexchart-web.web.app/charts/programming_languages/)
@@ -27,7 +27,7 @@
 - [x] [2021: Worlwide Popular Websites](https://flexchart-web.web.app/charts/popular_pages)
 - [x] [March: Data Bases](https://flexchart-web.web.app/charts/data_bases)
 
-## Create your Own Chart
+## Create your Own Charts
 
 1. Visit [here](https://flexchart-web.web.app/)
 1. Clik on create my Own and sign Up with your e-mail & password or with your google account.
