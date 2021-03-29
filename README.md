@@ -1,19 +1,21 @@
+# [FlexChart](https://flexchart-web.web.app)
+
 <br>
 
 <div align="center">
-  <img src="https://flexchart-web.web.app/img/icon.png" alt="FlexChart">
-</div>
+  <img src="https://flexchart-web.web.app/img/icon.png" width="340" height="340" alt="Flexchart">
+
   <br>
   <br>
 
 
-# FlexChart - The modern data visulization tool
+
 
 Flexchart is a project that brings some statistics about COVID, popular Programming languages among others. It also allows you to create your own charts. Website: https://flexchart-web.web.app/
 
-# No Installation Required
+</div>
 
-Visit our live website [here](https://flexchart-web.web.app/) or copy & paste the link https://flexchart-web.web.app/
+
 
 # Usage
 
@@ -48,3 +50,4 @@ Visit our live website [here](https://flexchart-web.web.app/) or copy & paste th
 # Licence
 
 Apache
+
