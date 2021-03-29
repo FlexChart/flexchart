@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="https://flexchart-web.web.app/img/icon.png" width="340" height="340" alt="Flexchart">
-</div>
+
   <br>
   <br>
 
@@ -48,3 +48,4 @@ Visit our live website [here](https://flexchart-web.web.app/) or copy & paste th
 # Licence
 
 Apache
+</div>
