@@ -1,3 +1,5 @@
+#[FlexChart](https://flexchart-web.web.app)
+
 <br>
 
 <div align="center">
@@ -7,7 +9,7 @@
   <br>
 </div>
 
-# FlexChart - The modern data visulization tool
+
 
 Flexchart is a project that brings some statistics about COVID, popular Programming languages among others. It also allows you to create your own charts. Website: https://flexchart-web.web.app/
 
