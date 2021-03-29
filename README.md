@@ -18,9 +18,6 @@ Flexchart is a project that brings some statistics about COVID, popular Programm
 
 
 
-
-# Usage
-
 ## Visit our trending charts
 
 1. [COVID](https://flexchart-web.web.app/charts/covid)
