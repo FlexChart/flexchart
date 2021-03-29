@@ -5,7 +5,7 @@
 
   <br>
   <br>
-
+</div>
 
 # FlexChart - The modern data visulization tool
 
@@ -48,4 +48,4 @@ Visit our live website [here](https://flexchart-web.web.app/) or copy & paste th
 # Licence
 
 Apache
-</div>
+
