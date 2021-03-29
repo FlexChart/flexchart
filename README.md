@@ -18,7 +18,7 @@ Flexchart is a project that brings some statistics about COVID, popular Programm
 
 
 
-# Visit our trending charts
+## Visit our trending charts
 
 - [x] [COVID](https://flexchart-web.web.app/charts/covid)
 - [x] [March: Programming Languages](https://flexchart-web.web.app/charts/programming_languages/)
@@ -27,7 +27,7 @@ Flexchart is a project that brings some statistics about COVID, popular Programm
 - [x] [2021: Worlwide Popular Websites](https://flexchart-web.web.app/charts/popular_pages)
 - [x] [March: Data Bases](https://flexchart-web.web.app/charts/data_bases)
 
-# Create your Own Chart
+## Create your Own Chart
 
 1. Visit [here](https://flexchart-web.web.app/)
 1. Clik on create my Own and sign Up with your e-mail & password or with your google account.
@@ -38,7 +38,7 @@ Flexchart is a project that brings some statistics about COVID, popular Programm
    - Columns are the "Y" axis. Type name and values vertically.
 1. That's it!!!
 
-# Contributing
+## Contributing
 
 1. Fork the project
 1. Create a new branch
@@ -46,7 +46,7 @@ Flexchart is a project that brings some statistics about COVID, popular Programm
 1. Commit to your local branch
 1. Submit a pull request
 
-# Licence
+## Licence
 
 Apache
 
