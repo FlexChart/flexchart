@@ -18,7 +18,7 @@ Flexchart is a project that brings some statistics about COVID, popular Programm
 
 
 
-## Visit our trending charts
+# Visit our trending charts
 
 1. [COVID](https://flexchart-web.web.app/charts/covid)
 1. [March: Programming Languages](https://flexchart-web.web.app/charts/programming_languages/)
@@ -27,7 +27,7 @@ Flexchart is a project that brings some statistics about COVID, popular Programm
 1. [2021: Worlwide Popular Websites](https://flexchart-web.web.app/charts/popular_pages)
 1. [March: Data Bases](https://flexchart-web.web.app/charts/data_bases)
 
-## Create your Own Chart
+# Create your Own Chart
 
 1. Visit [here](https://flexchart-web.web.app/)
 1. Clik on create my Own and sign Up with your e-mail & password or with your google account.
