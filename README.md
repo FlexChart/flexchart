@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="https://flexchart-web.web.app/img/icon.png" alt="FlexChart">
-
+</div>
   <br>
   <br>
 
