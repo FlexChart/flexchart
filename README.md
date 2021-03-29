@@ -46,7 +46,7 @@
 1. Commit to your local branch
 1. Submit a pull request
 
-## Licence
 
-Apache
+## Authors
 
+Zhenyu Liang, Tony, Hann. 
