@@ -4,9 +4,10 @@
 
 <div align="center">
   <img src="https://flexchart-web.web.app/img/icon.png" width="340" height="340" alt="Flexchart">
+  <br>
   <img src="https://flexchart-web.web.app/img/underline.png.png" alt="">
   <br>
-  <br>
+
 
 
 
