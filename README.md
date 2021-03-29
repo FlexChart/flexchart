@@ -1,4 +1,4 @@
-#[FlexChart](https://flexchart-web.web.app)
+# [FlexChart](https://flexchart-web.web.app)
 
 <br>
 
