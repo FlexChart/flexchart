@@ -15,7 +15,7 @@ Flexchart is a project that brings some statistics about COVID, popular Programm
 
 </div>
 
-Visit our live website [here](https://flexchart-web.web.app/) or copy & paste the link https://flexchart-web.web.app/
+
 
 # Usage
 
