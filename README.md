@@ -1,3 +1,12 @@
+<br>
+
+<div align="center">
+  <img src="https://flexchart-web.web.app/img/icon.png" alt="FlexChart">
+</div>
+  <br>
+  <br>
+
+
 # FlexChart - The modern data visulization tool
 
 Flexchart is a project that brings some statistics about COVID, popular Programming languages among others. It also allows you to create your own charts. Website: https://flexchart-web.web.app/
