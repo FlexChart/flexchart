@@ -7,8 +7,6 @@
   <br>
   <br>
   <br>
-  <img src="https://flexchart-web.web.app/img/underline.png" alt="">
-  <br>
   <br>
 </div>
 
