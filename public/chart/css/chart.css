@@ -228,8 +228,10 @@ main{
 #data-table tr:nth-child(1) td:nth-child(1){
     background-color: white;
     color:transparent;
+    font-size: 0;
     pointer-events: none;
 }
+
 
 #data-table td{
     border: 1px solid var(--lighter-grey);
@@ -238,6 +240,11 @@ main{
     padding: 5px;
     text-align: right;
     margin: 0;
+}
+
+#data-table td:focus{
+    outline: 2px solid var(--main-color);
+    z-index: 10;
 }
 
 #load-example-data,#clear-all-data{

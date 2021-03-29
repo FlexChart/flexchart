@@ -145,7 +145,7 @@ function generateTable(data){
                 (i)=>{
                     let cells = "";
                     for(let j = 0; j<columns + 2; j++){
-                        cells += "<td id='tablecell"+j+"-"+i+"'contenteditable='true' onfocus='previousFocusId = \"tablecell"+j+"-"+i+"\"' onblur='updateTableData("+i+", "+j+", this.innerText)'>" + ((data[j]?.[i]) ?? "") + "</td>"
+                        cells += "<td id='tablecell"+j+"-"+i+"'contenteditable='plaintext-only' onfocus='previousFocusId = \"tablecell"+j+"-"+i+"\"' onblur='updateTableData("+i+", "+j+", this.innerText)' onkeydown='if(event.keyCode==37){document.querySelector(\"#tablecell"+(j-1)+"-"+i+"\").focus()}else if(event.keyCode==38){document.querySelector(\"#tablecell"+j+"-"+(i-1)+"\").focus()}else if(event.keyCode==39){document.querySelector(\"#tablecell"+(j+1)+"-"+i+"\").focus()}else if(event.keyCode==40){document.querySelector(\"#tablecell"+j+"-"+(i+1)+"\").focus()}''>" + ((data[j]?.[i]) ?? "") + "</td>"
                     }
                     return cells;
                 }
