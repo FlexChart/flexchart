@@ -14,10 +14,8 @@ body,
 html {
   background-color: var(--main-bg-color);
   color: var(--dark);
-  min-width: 500px;
   overflow-y: auto;
   overflow-x: hidden;
-  height: 100%;
 }
 
 header {
@@ -57,6 +55,10 @@ button:active {
   transform: scale(1.04);
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 /* scrollbar */
 
@@ -172,10 +174,8 @@ a:hover::after {
 }
 
 #main-text-container a::after {
-  width:0;
+  width: 0;
 }
-
-
 
 #computer-svg {
   position: relative;
@@ -185,4 +185,64 @@ a:hover::after {
 
 #about-page {
   font-weight: 600;
+}
+
+#menu-button {
+  display: none;
+}
+#menu-panel {
+  display: none;
+}
+@media only screen and (max-width: 1188px) {
+  #computer-svg {
+    display: none;
+  }
+
+  #main-text-container p {
+    padding: 0;
+    font-size: 14px;
+  }
+  #main-text-container h1 {
+    padding-bottom: 0;
+    font-size: 30px;
+  }
+
+  #main-text-container {
+    padding: 0 20%;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  #main-container {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  #main-text-container h1 {
+    display: none;
+  }
+  #main-text-container {
+    padding: 0 10%;
+  }
+
+  #menu-button {
+    display: block;
+    position: relative;
+  }
+  #menu-panel {
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    border: solid var(--main-grey) 1px;
+    border-radius: 5px;
+    padding: 5px;
+    padding-bottom: 15px;
+    background-color: var(--main-bg-color);
+    display: none;
+  }
+  #about-page,
+  #projects-page {
+    display: none;
+  }
 }

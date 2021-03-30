@@ -15,12 +15,18 @@
         <div style="position: relative;">
             <nav class="main-navbar" id="main-navbar">
                 <div id="main-title-container">
-                    <h1 id="main-title">flexchart</h1>
+                    <h1 id="main-title">
+                        <a href="/">flexchart</a>
+                    </h1>
                 </div>
-                <a class="nav-element about-page" id="about-page" >about</a>
-                <a class="nav-element projects-page" id="projects-page">projects</a>
+                <a class="nav-element about-page" id="about-page">about</a>
+                <a href="/user" class="nav-element projects-page" id="projects-page">projects</a>
                 <div class="flex-spacer"></div>
-<!--                <button id="menu-button">menu</button> -->
+                <button id="menu-button" onclick="toggleMenuPanel()">menu</button>
+                <div id="menu-panel">
+                    <a class="nav-element-panel about-page-panel" id="about-page-panel">about</a>
+                    <a href="/user" class="nav-element-panel projects-page-panel" id="projects-page-panel">projects</a>
+                </div>
             </nav>
         </div>
     </header>
