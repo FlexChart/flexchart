@@ -31,7 +31,7 @@
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
     </script>
-    <script src="js/auth.js"> </script>
+
     <script src="js/content.js"> </script>
     <script src="js/nav.js" defer></script>
     <script src="js/trendChoice.js" defer></script>
@@ -54,7 +54,7 @@
     </header>
     <main id="user-projects-page">
         <div id="main-heading">
-            <h2 id="greet-title">Hello, User</h2>
+            <h2 id="greet-title">Hello, </h2>
             <div class="flex-spacer"></div>
             <button id="all-projects-page-btn">Click to View All Projects</button>
         </div>
@@ -110,7 +110,7 @@
             <div id="dark-shadow-1" class="dark-shadow">
 
                 <div id="project-setting-pop-up">
-                    <div id="pop-up-top" >
+                    <div id="pop-up-top">
                         <h3 class="pop-up-title">Setting</h3>
                         <div class="flex-spacer"></div>
                     </div>
@@ -135,11 +135,11 @@
                         <div id="edit-name-pop-up">
                             <div id="edit-name-container">
                                 <p id="name-message" class="p-text">
-                                    New Project Name: 
+                                    New Project Name:
                                 </p>
 
                                 <input id="new-project-name-input" type="text" placeholder="new project name...">
-                               
+
                                 <div class="buttons-container">
                                     <button class="confirm-button" id="confirm-name-button">Confirm</button>
                                     <button class="confirm-button" id="cancel-name-button">Cancel</button>
@@ -154,6 +154,7 @@
             </div>
 
     </main>
+    <script src="js/auth.js"> </script>
 </body>
 
 </html>
