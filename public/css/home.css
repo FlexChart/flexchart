@@ -14,10 +14,8 @@ body,
 html {
   background-color: var(--main-bg-color);
   color: var(--dark);
-  min-width: 500px;
   overflow-y: auto;
   overflow-x: hidden;
-  height: 100%;
 }
 
 header {
@@ -420,5 +418,30 @@ a:hover::after {
   #projects-page,
   #login-page {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #trends-section {
+    margin-bottom: 10%;
+  }
+  #trends-grid-container {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10%;
+    text-align: center;
+  }
+  #quote-sentence-container h1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  #trends-grid-container {
+    grid-template-columns: 1fr;
+    margin-bottom: 10%;
+    text-align: center;
+  }
+  #quote-sentence-container h1 {
+    font-size: 28px;
   }
 }

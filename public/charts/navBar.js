@@ -1,6 +1,10 @@
 let menuButton = document.getElementById("menu-button");
 let navbarSize = document.getElementById("main-navbar");
 let menuPanel = document.querySelector(".menu-panel");
+let menuPanelItems = document.querySelectorAll(".menu-panel-items");
+
+console.log(menuPanelItems[0])
+console.log(menuPanelItems[1])
 
 let menuIsOpened = false;
 
@@ -12,11 +16,18 @@ projectPageButton.addEventListener("click", () => {
     window.location.href = window.location.origin + "//user";
 })
 
+menuPanelItems[0].addEventListener("click", () => {
+    window.location.href = window.location.origin + "//user";
+})
 
 contributePageBtn.addEventListener("click", () => {
     window.open("https://github.com/FlexChart/flexchart", "_blank");
 });
 
+menuPanelItems[1].addEventListener("click", () => {
+    window.open("https://github.com/FlexChart/flexchart", "_blank");
+    showMenuPanel()
+})
 
 mainTitle.addEventListener("click", () => {
     window.location.href = window.location.origin;
