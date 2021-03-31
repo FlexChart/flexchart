@@ -3,18 +3,14 @@
 <br>
 
 <div align="center">
-  <img src="https://flexchart-web.web.app/img/icon.png" width="240" height="240" alt="Flexchart">
+  <img src="https://flexchart-web.web.app/img/Icon.png" width="240" height="240" alt="Flexchart">
   <br>
   <br>
   <br>
   <br>
 </div>
 
-
-
 [Flexchart](https://flexchart-web.web.app) is a modern data graphing tool. It brings statistics about COVID, Popular Programming languages and many others. It also allows you to create your own charts as well. Website: https://flexchart-web.web.app/
-
-
 
 ## Trending Charts
 
@@ -44,7 +40,6 @@
 1. Commit to your local branch
 1. Submit a pull request
 
-
 ## Authors
 
-Zhenyu Liang, Tony, Hann. 
+Zhenyu Liang, Tony, Hann.
